@@ -1467,3 +1467,204 @@
 2025-07-23 12:13:27,835 [Worker-10: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 59 resources from src\main\resources to target\classes
 2025-07-23 12:13:28,037 [Worker-10: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory P:\NurshingCollegeProject\nursing-college-website\src\test\resources
 2025-07-23 12:13:39,604 [main] INFO  o.e.m2e.actions.ExecutePomAction - Creating new launch configuration
+2025-07-23 12:16:02,963 [Worker-11: Launching nursing-college-website (1)] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=org.eclipse.m2e.maven.runtime_3.9.900.20250220-2013 [1738])
+2025-07-23 12:16:02,967 [Worker-11: Launching nursing-college-website (1)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\pprou\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20250220-2013
+2025-07-23 12:16:02,968 [Worker-11: Launching nursing-college-website (1)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\pprou\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20250220-2013\jars\aopalliance-1.0.jar
+2025-07-23 12:16:02,969 [Worker-11: Launching nursing-college-website (1)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\pprou\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20250220-2013\jars\guice-5.1.0.jar
+2025-07-23 12:16:02,969 [Worker-11: Launching nursing-college-website (1)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\pprou\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20250220-2013\jars\httpclient-4.5.14.jar
+2025-07-23 12:16:02,969 [Worker-11: Launching nursing-college-website (1)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\pprou\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20250220-2013\jars\httpcore-4.4.16.jar
+2025-07-23 12:16:02,970 [Worker-11: Launching nursing-college-website (1)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\pprou\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20250220-2013\jars\jansi-2.4.1.jar
+2025-07-23 12:16:02,970 [Worker-11: Launching nursing-college-website (1)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\pprou\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20250220-2013\jars\jcl-over-slf4j-1.7.36.jar
+2025-07-23 12:16:02,970 [Worker-11: Launching nursing-college-website (1)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\pprou\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20250220-2013\jars\maven-artifact-3.9.9.jar
+2025-07-23 12:16:02,971 [Worker-11: Launching nursing-college-website (1)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\pprou\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20250220-2013\jars\maven-builder-support-3.9.9.jar
+2025-07-23 12:16:02,971 [Worker-11: Launching nursing-college-website (1)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\pprou\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20250220-2013\jars\maven-compat-3.9.9.jar
+2025-07-23 12:16:02,971 [Worker-11: Launching nursing-college-website (1)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\pprou\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20250220-2013\jars\maven-core-3.9.9.jar
+2025-07-23 12:16:02,972 [Worker-11: Launching nursing-college-website (1)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\pprou\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20250220-2013\jars\maven-embedder-3.9.9.jar
+2025-07-23 12:16:02,972 [Worker-11: Launching nursing-college-website (1)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\pprou\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20250220-2013\jars\maven-model-3.9.9.jar
+2025-07-23 12:16:02,973 [Worker-11: Launching nursing-college-website (1)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\pprou\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20250220-2013\jars\maven-model-builder-3.9.9.jar
+2025-07-23 12:16:02,974 [Worker-11: Launching nursing-college-website (1)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\pprou\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20250220-2013\jars\maven-plugin-api-3.9.9.jar
+2025-07-23 12:16:02,974 [Worker-11: Launching nursing-college-website (1)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\pprou\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20250220-2013\jars\maven-repository-metadata-3.9.9.jar
+2025-07-23 12:16:02,974 [Worker-11: Launching nursing-college-website (1)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\pprou\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20250220-2013\jars\maven-resolver-api-1.9.22.jar
+2025-07-23 12:16:02,975 [Worker-11: Launching nursing-college-website (1)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\pprou\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20250220-2013\jars\maven-resolver-connector-basic-1.9.22.jar
+2025-07-23 12:16:02,975 [Worker-11: Launching nursing-college-website (1)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\pprou\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20250220-2013\jars\maven-resolver-impl-1.9.22.jar
+2025-07-23 12:16:02,976 [Worker-11: Launching nursing-college-website (1)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\pprou\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20250220-2013\jars\maven-resolver-named-locks-1.9.22.jar
+2025-07-23 12:16:02,976 [Worker-11: Launching nursing-college-website (1)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\pprou\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20250220-2013\jars\maven-resolver-provider-3.9.9.jar
+2025-07-23 12:16:02,977 [Worker-11: Launching nursing-college-website (1)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\pprou\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20250220-2013\jars\maven-resolver-spi-1.9.22.jar
+2025-07-23 12:16:02,977 [Worker-11: Launching nursing-college-website (1)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\pprou\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20250220-2013\jars\maven-resolver-transport-file-1.9.22.jar
+2025-07-23 12:16:02,978 [Worker-11: Launching nursing-college-website (1)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\pprou\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20250220-2013\jars\maven-resolver-transport-http-1.9.22.jar
+2025-07-23 12:16:02,978 [Worker-11: Launching nursing-college-website (1)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\pprou\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20250220-2013\jars\maven-resolver-transport-wagon-1.9.22.jar
+2025-07-23 12:16:02,978 [Worker-11: Launching nursing-college-website (1)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\pprou\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20250220-2013\jars\maven-resolver-util-1.9.22.jar
+2025-07-23 12:16:02,979 [Worker-11: Launching nursing-college-website (1)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\pprou\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20250220-2013\jars\maven-settings-3.9.9.jar
+2025-07-23 12:16:02,980 [Worker-11: Launching nursing-college-website (1)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\pprou\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20250220-2013\jars\maven-settings-builder-3.9.9.jar
+2025-07-23 12:16:02,981 [Worker-11: Launching nursing-college-website (1)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\pprou\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20250220-2013\jars\maven-shared-utils-3.4.2.jar
+2025-07-23 12:16:02,982 [Worker-11: Launching nursing-college-website (1)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\pprou\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20250220-2013\jars\org.eclipse.sisu.inject-0.9.0.M3.jar
+2025-07-23 12:16:02,984 [Worker-11: Launching nursing-college-website (1)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\pprou\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20250220-2013\jars\org.eclipse.sisu.plexus-0.9.0.M3.jar
+2025-07-23 12:16:02,985 [Worker-11: Launching nursing-college-website (1)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\pprou\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20250220-2013\jars\plexus-build-api-0.0.7.jar
+2025-07-23 12:16:02,986 [Worker-11: Launching nursing-college-website (1)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\pprou\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20250220-2013\jars\plexus-build-api-1.2.0.jar
+2025-07-23 12:16:02,987 [Worker-11: Launching nursing-college-website (1)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\pprou\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20250220-2013\jars\plexus-cipher-2.0.jar
+2025-07-23 12:16:02,987 [Worker-11: Launching nursing-college-website (1)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\pprou\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20250220-2013\jars\plexus-classworlds-2.8.0.jar
+2025-07-23 12:16:02,988 [Worker-11: Launching nursing-college-website (1)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\pprou\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20250220-2013\jars\plexus-component-annotations-2.1.0.jar
+2025-07-23 12:16:02,988 [Worker-11: Launching nursing-college-website (1)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\pprou\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20250220-2013\jars\plexus-interpolation-1.27.jar
+2025-07-23 12:16:02,989 [Worker-11: Launching nursing-college-website (1)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\pprou\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20250220-2013\jars\plexus-sec-dispatcher-2.0.jar
+2025-07-23 12:16:02,990 [Worker-11: Launching nursing-college-website (1)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\pprou\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20250220-2013\jars\plexus-utils-3.5.1.jar
+2025-07-23 12:16:02,990 [Worker-11: Launching nursing-college-website (1)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\pprou\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20250220-2013\jars\plexus-xml-3.0.1.jar
+2025-07-23 12:16:02,991 [Worker-11: Launching nursing-college-website (1)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\pprou\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20250220-2013\jars\wagon-file-3.5.3.jar
+2025-07-23 12:16:02,991 [Worker-11: Launching nursing-college-website (1)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\pprou\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20250220-2013\jars\wagon-http-3.5.3.jar
+2025-07-23 12:16:02,992 [Worker-11: Launching nursing-college-website (1)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\pprou\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20250220-2013\jars\wagon-http-shared-3.5.3.jar
+2025-07-23 12:16:02,993 [Worker-11: Launching nursing-college-website (1)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\pprou\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20250220-2013\jars\wagon-provider-api-3.5.3.jar
+2025-07-23 12:16:02,994 [Worker-11: Launching nursing-college-website (1)] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=com.google.guava_33.4.0.jre [1068])
+2025-07-23 12:16:02,995 [Worker-11: Launching nursing-college-website (1)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\pprou\.p2\pool\plugins\com.google.guava_33.4.0.jre.jar
+2025-07-23 12:16:02,995 [Worker-11: Launching nursing-college-website (1)] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=slf4j.api_2.0.17 [1834])
+2025-07-23 12:16:02,996 [Worker-11: Launching nursing-college-website (1)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\pprou\.p2\pool\plugins\slf4j.api_2.0.17.jar
+2025-07-23 12:16:02,996 [Worker-11: Launching nursing-college-website (1)] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=javax.inject_1.0.0.v20220405-0441 [21])
+2025-07-23 12:16:02,999 [Worker-11: Launching nursing-college-website (1)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\pprou\.p2\pool\plugins\javax.inject_1.0.0.v20220405-0441.jar
+2025-07-23 12:16:02,999 [Worker-11: Launching nursing-college-website (1)] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=javax.annotation_1.3.5.v20230504-0748 [1082])
+2025-07-23 12:16:03,000 [Worker-11: Launching nursing-college-website (1)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\pprou\.p2\pool\plugins\javax.annotation_1.3.5.v20230504-0748.jar
+2025-07-23 12:16:03,000 [Worker-11: Launching nursing-college-website (1)] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=org.apache.commons.cli_1.9.0 [890])
+2025-07-23 12:16:03,001 [Worker-11: Launching nursing-college-website (1)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\pprou\.p2\pool\plugins\org.apache.commons.cli_1.9.0.jar
+2025-07-23 12:16:03,001 [Worker-11: Launching nursing-college-website (1)] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=org.apache.commons.commons-codec_1.16.0 [892])
+2025-07-23 12:16:03,001 [Worker-11: Launching nursing-college-website (1)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\pprou\.p2\pool\plugins\org.apache.commons.commons-codec_1.16.0.jar
+2025-07-23 12:16:03,002 [Worker-11: Launching nursing-college-website (1)] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=com.google.guava.failureaccess_1.0.2 [875])
+2025-07-23 12:16:03,002 [Worker-11: Launching nursing-college-website (1)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\pprou\.p2\pool\plugins\com.google.guava.failureaccess_1.0.2.jar
+2025-07-23 12:16:03,004 [Worker-11: Launching nursing-college-website (1)] INFO  o.e.m.i.launch.MavenLaunchDelegate - Run build in "P:\NurshingCollegeProject\nursing-college-website":
+2025-07-23 12:16:03,004 [Worker-11: Launching nursing-college-website (1)] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -Ppom.xml -B -Dstyle.color=always spring-boot:run
+2025-07-23 12:30:35,717 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-07-23 12:30:35,744 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-07-23 12:30:35,760 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory P:\NurshingCollegeProject\nursing-college-website\src\test\resources
+2025-07-23 12:30:37,469 [Worker-0: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-07-23 12:30:37,473 [Worker-0: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 59 resources from src\main\resources to target\classes
+2025-07-23 12:30:37,592 [Worker-0: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory P:\NurshingCollegeProject\nursing-college-website\src\test\resources
+2025-07-23 12:31:26,688 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-07-23 12:31:26,712 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-07-23 12:31:26,727 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory P:\NurshingCollegeProject\nursing-college-website\src\test\resources
+2025-07-23 12:32:00,594 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-07-23 12:32:00,613 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-07-23 12:32:00,621 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory P:\NurshingCollegeProject\nursing-college-website\src\test\resources
+2025-07-23 12:33:57,499 [Worker-0: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-07-23 12:33:57,515 [Worker-0: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-07-23 12:33:57,521 [Worker-0: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory P:\NurshingCollegeProject\nursing-college-website\src\test\resources
+2025-07-23 12:34:59,552 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-07-23 12:34:59,569 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-07-23 12:34:59,576 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory P:\NurshingCollegeProject\nursing-college-website\src\test\resources
+2025-07-23 16:10:40,023 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2025-07-23 16:14:01,180 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-07-23 16:14:01,218 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 59 resources from src\main\resources to target\classes
+2025-07-23 16:14:01,277 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory P:\NurshingCollegeProject\nursing-college-website\src\test\resources
+2025-07-23 16:15:28,163 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-07-23 16:15:28,184 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-07-23 16:15:28,197 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory P:\NurshingCollegeProject\nursing-college-website\src\test\resources
+2025-07-23 16:17:19,392 [Worker-10: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-07-23 16:17:19,414 [Worker-10: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-07-23 16:17:19,519 [Worker-10: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory P:\NurshingCollegeProject\nursing-college-website\src\test\resources
+2025-07-23 16:19:31,220 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-07-23 16:19:31,240 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-07-23 16:19:31,248 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory P:\NurshingCollegeProject\nursing-college-website\src\test\resources
+2025-07-23 16:23:15,381 [Worker-10: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-07-23 16:23:15,406 [Worker-10: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-07-23 16:23:15,430 [Worker-10: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory P:\NurshingCollegeProject\nursing-college-website\src\test\resources
+2025-07-23 16:27:08,192 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-07-23 16:27:08,211 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-07-23 16:27:08,233 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory P:\NurshingCollegeProject\nursing-college-website\src\test\resources
+2025-07-23 16:27:58,102 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-07-23 16:27:58,117 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-07-23 16:27:58,124 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory P:\NurshingCollegeProject\nursing-college-website\src\test\resources
+2025-07-23 16:30:06,430 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-07-23 16:30:06,441 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-07-23 16:30:06,447 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory P:\NurshingCollegeProject\nursing-college-website\src\test\resources
+2025-07-23 16:30:34,343 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-07-23 16:30:34,363 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-07-23 16:30:34,373 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory P:\NurshingCollegeProject\nursing-college-website\src\test\resources
+2025-07-23 16:34:55,749 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-07-23 16:34:55,777 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-07-23 16:34:55,785 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory P:\NurshingCollegeProject\nursing-college-website\src\test\resources
+2025-07-23 16:37:13,321 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-07-23 16:37:13,339 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-07-23 16:37:13,346 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory P:\NurshingCollegeProject\nursing-college-website\src\test\resources
+2025-07-23 16:38:09,203 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-07-23 16:38:09,217 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-07-23 16:38:09,224 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory P:\NurshingCollegeProject\nursing-college-website\src\test\resources
+2025-07-23 16:39:00,226 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-07-23 16:39:00,242 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-07-23 16:39:00,253 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory P:\NurshingCollegeProject\nursing-college-website\src\test\resources
+2025-07-23 16:39:14,121 [Worker-15: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-07-23 16:39:14,135 [Worker-15: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-07-23 16:39:14,149 [Worker-15: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory P:\NurshingCollegeProject\nursing-college-website\src\test\resources
+2025-07-23 16:44:36,542 [Worker-15: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-07-23 16:44:36,560 [Worker-15: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-07-23 16:44:36,617 [Worker-15: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory P:\NurshingCollegeProject\nursing-college-website\src\test\resources
+2025-07-23 17:00:34,169 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-07-23 17:00:34,192 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-07-23 17:00:34,225 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory P:\NurshingCollegeProject\nursing-college-website\src\test\resources
+2025-07-23 17:01:20,765 [Worker-10: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-07-23 17:01:20,783 [Worker-10: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-07-23 17:01:20,814 [Worker-10: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory P:\NurshingCollegeProject\nursing-college-website\src\test\resources
+2025-07-23 17:01:53,328 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-07-23 17:01:53,352 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-07-23 17:01:53,369 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory P:\NurshingCollegeProject\nursing-college-website\src\test\resources
+2025-07-23 17:02:24,038 [Worker-15: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-07-23 17:02:24,051 [Worker-15: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-07-23 17:02:24,061 [Worker-15: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory P:\NurshingCollegeProject\nursing-college-website\src\test\resources
+2025-07-23 17:03:30,634 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-07-23 17:03:30,651 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-07-23 17:03:30,743 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory P:\NurshingCollegeProject\nursing-college-website\src\test\resources
+2025-07-23 17:05:53,032 [Worker-7: https://www.codetogether.com/updates/ci/compositeArtifacts.jar] WARN  o.a.h.c.h.p.ResponseProcessCookies - ex-0000000534 Cookie rejected [_cfuvid="AFfQ4N6I02AhEwWn_.fCaSvvJMe8D4wGi8.CyQWNXsc-1753270553048-0.0.1.1-604800000", domain:cdn.webflow.com, path:/, expiry:null] Illegal 'domain' attribute "cdn.webflow.com". Domain of origin: "www.codetogether.com"
+2025-07-23 17:08:39,119 [Worker-10: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-07-23 17:08:39,134 [Worker-10: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-07-23 17:08:39,144 [Worker-10: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory P:\NurshingCollegeProject\nursing-college-website\src\test\resources
+2025-07-23 17:09:11,757 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-07-23 17:09:11,776 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-07-23 17:09:11,794 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory P:\NurshingCollegeProject\nursing-college-website\src\test\resources
+2025-07-23 17:10:05,829 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-07-23 17:10:05,845 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-07-23 17:10:05,853 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory P:\NurshingCollegeProject\nursing-college-website\src\test\resources
+2025-07-23 17:13:40,218 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-07-23 17:13:40,235 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-07-23 17:13:40,245 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory P:\NurshingCollegeProject\nursing-college-website\src\test\resources
+2025-07-23 17:17:13,354 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-07-23 17:17:13,371 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-07-23 17:17:13,410 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory P:\NurshingCollegeProject\nursing-college-website\src\test\resources
+2025-07-23 17:18:13,600 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-07-23 17:18:13,618 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-07-23 17:18:13,629 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory P:\NurshingCollegeProject\nursing-college-website\src\test\resources
+2025-07-23 17:18:29,424 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-07-23 17:18:29,448 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-07-23 17:18:29,457 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory P:\NurshingCollegeProject\nursing-college-website\src\test\resources
+2025-07-23 17:19:29,977 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-07-23 17:19:30,008 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-07-23 17:19:30,021 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory P:\NurshingCollegeProject\nursing-college-website\src\test\resources
+2025-07-23 17:19:32,337 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-07-23 17:19:32,354 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-07-23 17:19:32,362 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory P:\NurshingCollegeProject\nursing-college-website\src\test\resources
+2025-07-23 17:25:25,313 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-07-23 17:25:25,332 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-07-23 17:25:25,338 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory P:\NurshingCollegeProject\nursing-college-website\src\test\resources
+2025-07-23 17:25:29,445 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-07-23 17:25:29,457 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-07-23 17:25:29,464 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory P:\NurshingCollegeProject\nursing-college-website\src\test\resources
+2025-07-23 17:29:07,125 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-07-23 17:29:07,171 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-07-23 17:29:07,182 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory P:\NurshingCollegeProject\nursing-college-website\src\test\resources
+2025-07-23 17:30:39,150 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-07-23 17:30:39,165 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-07-23 17:30:39,172 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory P:\NurshingCollegeProject\nursing-college-website\src\test\resources
+2025-07-23 17:30:40,395 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-07-23 17:30:40,413 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 3 resources from src\main\resources to target\classes
+2025-07-23 17:30:40,423 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory P:\NurshingCollegeProject\nursing-college-website\src\test\resources
+2025-07-23 17:31:30,757 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-07-23 17:31:30,768 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-07-23 17:31:30,774 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory P:\NurshingCollegeProject\nursing-college-website\src\test\resources
+2025-07-23 17:33:18,232 [Worker-10: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-07-23 17:33:18,267 [Worker-10: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-07-23 17:33:18,279 [Worker-10: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory P:\NurshingCollegeProject\nursing-college-website\src\test\resources
+2025-07-23 17:33:45,539 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-07-23 17:33:45,549 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-07-23 17:33:45,555 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory P:\NurshingCollegeProject\nursing-college-website\src\test\resources
+2025-07-23 17:35:18,248 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-07-23 17:35:18,277 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-07-23 17:35:18,284 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory P:\NurshingCollegeProject\nursing-college-website\src\test\resources
+2025-07-23 17:36:56,170 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-07-23 17:36:56,185 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-07-23 17:36:56,191 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory P:\NurshingCollegeProject\nursing-college-website\src\test\resources
+2025-07-23 17:36:57,367 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-07-23 17:36:57,412 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 5 resources from src\main\resources to target\classes
+2025-07-23 17:36:57,451 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory P:\NurshingCollegeProject\nursing-college-website\src\test\resources

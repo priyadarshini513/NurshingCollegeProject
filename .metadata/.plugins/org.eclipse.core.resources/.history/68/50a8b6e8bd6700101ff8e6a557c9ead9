@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Thesis – KINS</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .page-header {
+    background-color: #2c2f38;
+    color: white;
+    padding: 80px 0 60px 0;
+    text-align: center;
+    border-bottom: 6px solid #ff9900; /* Bold colored border */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Optional soft shadow */
+}
+        .breadcrumb-section {
+            background-color: #f5f5f5;
+            padding: 10px 0;
+            text-align: center;
+            font-size: 18px;
+        }
+        .table-section {
+            padding: 40px 20px;
+        }
+        .table thead {
+            background-color: #ff9900;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+<!-- ✅ Top Header Section with Logo and Founder Info -->
+<div style="background: linear-gradient(to right, #1e3c72, #2a5298); color: white; padding: 10px 20px;"
+     class="d-flex justify-content-between align-items-center flex-wrap">
+
+    <!-- 🔗 Left: Go to Jyoti Home Page -->
+    <div class="d-flex align-items-center gap-2 mb-2 mb-md-0">
+        <i class="bi bi-arrow-left-circle-fill fs-5 text-white"></i>
+        <a href="https://kiit.ac.in" target="_blank" class="text-white text-decoration-none fw-bold">
+            GO TO JYOTI HOME PAGE
+        </a>
+    </div>
+
+    <!-- 🌐 Center: Social Icons -->
+    <div class="d-flex gap-3 mb-2 mb-md-0">
+        <a href="https://facebook.com" class="text-white" target="_blank" title="Facebook">
+            <i class="bi bi-facebook fs-5"></i>
+        </a>
+        <a href="https://twitter.com" class="text-white" target="_blank" title="Twitter">
+            <i class="bi bi-twitter fs-5"></i>
+        </a>
+        <a href="https://youtube.com" class="text-white" target="_blank" title="YouTube">
+            <i class="bi bi-youtube fs-5"></i>
+        </a>
+        <a href="https://instagram.com" class="text-white" target="_blank" title="Instagram">
+            <i class="bi bi-instagram fs-5"></i>
+        </a>
+    </div>
+
+    <!-- 👤 Right: Founder Info -->
+    <div class="d-flex align-items-center">
+        <img src="/images/jyotikumar.jpg" alt="Founder"
+             style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;" class="me-2">
+        <div>
+            <strong>Prof.Jyotikumar</strong><br>
+            <small>Founder – JNC</small><br>
+            <a href="https://jyotikumar.com" class="text-white text-decoration-none" target="_blank">jyotikumar.com</a>
+        </div>
+    </div>
+</div>
+<!-- ✅ College Logo and Name Strip -->
+<div class="bg-white py-2 px-3 d-flex justify-content-between align-items-center border-bottom">
+    <!-- Left: Logo + Name -->
+    <div class="d-flex align-items-center gap-3">
+        <img src="/images/logo.jpg" alt="College Logo" style="height: 60px;">
+        <div>
+            <h5 class="mb-0 text-dark fw-bold">JYOTI NURSING COLLEGE</h5>
+            <small class="text-muted">Affiliated to XYZ University | Est. 2020</small>
+        </div>
+    </div>
+</div>
+
+
+<!-- Top Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #f57c00; width: 100%;">
+
+    <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navmenu">
+    <ul class="navbar-nav w-100 d-flex justify-content-between text-center">
+    <li class="nav-item flex-fill">
+        <a class="nav-link active fw-bold text-white" th:href="@{/}">HOME</a>
+    </li>
+    <li class="nav-item flex-fill">
+        <a class="nav-link text-white" th:href="@{/about}">ABOUT</a>
+    </li>
+    <li class="nav-item flex-fill">
+        <a class="nav-link text-white" th:href="@{/courses}">ACADEMICS</a>
+    </li>
+    <li class="nav-item dropdown flex-fill">
+        <a class="nav-link text-white dropdown-toggle" href="#" id="admissionDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            ADMISSIONS
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="admissionDropdown">
+            <li>
+                <a class="dropdown-item text-danger fw-bold" th:href="@{/admission}">
+                    <i class="bi bi-box-arrow-in-right me-1"></i> APPLY
+                </a>
+            </li>
+        </ul>
+    </li>
+     <li class="nav-item flex-fill">
+        <a class="nav-link text-white" th:href="@{/gallery}">LABORATORY</a>
+    </li>
+    <li class="nav-item flex-fill">
+        <a class="nav-link text-white" th:href="@{/events}">EVENTS</a>
+    </li>
+   <li class="nav-item dropdown position-relative">
+    <a class="nav-link dropdown-toggle fw-bold text-white" href="#" id="researchDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        RESEARCH
+    </a>
+    <ul class="dropdown-menu custom-dropdown" aria-labelledby="researchDropdown">
+        <li><a class="dropdown-item" href="/publications">Publications</a></li>
+        <li><a class="dropdown-item" href="/research-list">Research list</a></li>
+        <li><a class="dropdown-item" href="/thesis">Thesis</a></li>
+    </ul>
+</li>
+   
+   
+    <li class="nav-item flex-fill">
+        <a class="nav-link text-white" th:href="@{/gallery}">PEOPLE</a>
+    </li>
+    <li class="nav-item flex-fill">
+        <a class="nav-link text-white" th:href="@{/contact}">CONTACT US</a>
+    </li>
+</ul>
+    
+</div>
+        
+    </div>
+</nav>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <h1>Thesis</h1>
+    </div>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb-section">
+        Home / Thesis (2014–2021) MSC
+    </div>
+
+    <!-- Thesis Table -->
+    <div class="table-section container-fluid">
+        <h3 class="text-center mb-4">Thesis (2014–2021) - M.Sc Nursing</h3>
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>SL NO</th>
+                        <th>Thesis Title</th>
+                        <th>Author</th>
+                        <th>Year</th>
+                        <th>Batch</th>
+                        <th>Guide</th>
+                        <th>Co Guide</th>
+                        <th>ACC NO</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>A study to assess the Effectiveness of PLANNED TEACHING PROGRAMME ON KNOWLEDGE AND ATTITUDE OF ADOLESCENT GIRLS ON PREVENTION OF HIV/AIDS AT KISS SCHOOL BBSR ODISHA</td>
+                        <td>Rasmita Mishra</td>
+                        <td>2014</td>
+                        <td>MSC</td>
+                        <td>Amrita Lenka</td>
+                        <td>Kalyani Rath</td>
+                        <td>MSC 56</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>A Descriptive study to Evaluate the quality of life among chronic RENAL FAILURE PATIENTS RECEIVING HEMODIALYSIS TREATMENT IN PBMH KIMS BBSR, ODISHA</td>
+                        <td>Minati DAS</td>
+                        <td>2014</td>
+                        <td>MSC</td>
+                        <td>Amrita Lenka</td>
+                        <td>R Asokan</td>
+                        <td>MSC 55</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>A quasi Experimental study to Assess the Effectiveness of Respiratory Exercises on the reduction of signs and symptoms of the patients with COPD in the pulmonary wards of PBMH Hospital KIIT university BBSR ODISHA</td>
+                        <td>Piyali Biswas</td>
+                        <td>2015</td>
+                        <td>MSC</td>
+                        <td>Amrita Lenka</td>
+                        <td>R Asokan</td>
+                        <td>MSC 001</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>A comparative Study to Evaluate the effectiveness of Back Muscle Stretch Exercises and warm Mustard oil message to Reduce back pain among postnatal mother at KIMS BBSR ODISHA</td>
+                        <td>Anasuya Behera</td>
+                        <td>2015</td>
+                        <td>MSC</td>
+                        <td>Kalyani Rath</td>
+                        <td>Deepa M Raju</td>
+                        <td>MSC 002</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>A Study to assess the Effectiveness of Abdominal Breathing Exercise in reduction of Blood Pressure among Hypertensive patients admitted</td>
+                        <td>Bidut Prava Sahoo</td>
+                        <td>2015</td>
+                        <td>MSC</td>
+                        <td>Amrita Lenka</td>
+                        <td>R Asokan</td>
+                        <td>MSC 075,57</td>
+                    </tr>
+                    <!-- Add more rows as needed -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

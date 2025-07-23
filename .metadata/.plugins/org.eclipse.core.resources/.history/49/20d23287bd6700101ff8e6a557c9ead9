@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Courses - Jyoti Nursing College</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"/>
+    <style>
+    /* 🔸 Navbar Link Hover Highlight */
+.navbar-nav .nav-link {
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: white;
+    color: #f57c00 !important;  /* keep branding color for text */
+    padding: 8px 12px;
+    border-radius: 6px;
+    text-decoration: none;
+}
+    </style>
+</head>
+<body>
+
+<!-- 🔵 Top Header Section -->
+<div style="background: linear-gradient(to right, #1e3c72, #2a5298); color: white; padding: 10px 20px;"
+     class="d-flex justify-content-between align-items-center flex-wrap">
+    <div class="d-flex align-items-center gap-2 mb-2 mb-md-0">
+        <i class="bi bi-arrow-left-circle-fill fs-5 text-white"></i>
+        <a href="https://kiit.ac.in" target="_blank" class="text-white text-decoration-none fw-bold">
+            GO TO JYOTI HOME PAGE
+        </a>
+    </div>
+    <div class="d-flex gap-3 mb-2 mb-md-0">
+        <a href="https://facebook.com" class="text-white" target="_blank" title="Facebook">
+            <i class="bi bi-facebook fs-5"></i>
+        </a>
+        <a href="https://twitter.com" class="text-white" target="_blank" title="Twitter">
+            <i class="bi bi-twitter fs-5"></i>
+        </a>
+        <a href="https://youtube.com" class="text-white" target="_blank" title="YouTube">
+            <i class="bi bi-youtube fs-5"></i>
+        </a>
+        <a href="https://instagram.com" class="text-white" target="_blank" title="Instagram">
+            <i class="bi bi-instagram fs-5"></i>
+        </a>
+    </div>
+    <div class="d-flex align-items-center">
+        <img src="/images/jyotikumar.jpg" alt="Founder"
+             style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;" class="me-2">
+        <div>
+            <strong>Prof.Jyotikumar</strong><br>
+            <small>Founder – JNC</small><br>
+            <a href="https://jyotikumar.com" class="text-white text-decoration-none" target="_blank">jyotikumar.com</a>
+        </div>
+    </div>
+</div>
+
+<!-- 🔶 Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #f57c00;">
+    <div class="container">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navmenu">
+            <ul class="navbar-nav w-100 d-flex justify-content-between text-center">
+                <li class="nav-item flex-fill">
+                    <a class="nav-link text-white fw-bold" th:href="@{/}">HOME</a>
+                </li>
+                <li class="nav-item flex-fill">
+                    <a class="nav-link text-white" th:href="@{/about}">ABOUT</a>
+                </li>
+                <li class="nav-item flex-fill">
+                    <a class="nav-link active fw-bold text-white" th:href="@{/courses}">ACADEMICS</a>
+                </li>
+                <li class="nav-item dropdown flex-fill">
+                    <a class="nav-link text-white dropdown-toggle" href="#" id="admissionDropdown" role="button" data-bs-toggle="dropdown">
+                        ADMISSIONS
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="admissionDropdown">
+                        <li>
+                            <a class="dropdown-item text-danger fw-bold" th:href="@{/admission}">
+                                <i class="bi bi-box-arrow-in-right me-1"></i> APPLY
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item flex-fill">
+                    <a class="nav-link text-white" th:href="@{/news}">EVENTS</a>
+                </li>
+                <li class="nav-item flex-fill">
+                    <a class="nav-link text-white" th:href="@{/gallery}">RESEARCH</a>
+                </li>
+                <li class="nav-item flex-fill">
+                    <a class="nav-link text-white" th:href="@{/gallery}">PEOPLE</a>
+                </li>
+                <li class="nav-item flex-fill">
+                    <a class="nav-link text-white" th:href="@{/contact}">CONTACT US</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- 🟢 Full Banner with Black Overlay & Center Text -->
+<section style="margin-top: 70px; position: relative;">
+    <!-- Background Image -->
+    <img src="/images/courses-banner.jpg" alt="Courses Banner" class="img-fluid w-100"
+         style="height: 500px; object-fit: cover;">
+    <!-- Overlay -->
+    <div style="
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.7);
+    "></div>
+    <!-- Centered Text -->
+    <div class="position-absolute top-50 start-50 translate-middle text-center text-white">
+        <h1 class="display-4 fw-bold">Courses</h1>
+        <p class="fs-5">Home / Courses</p>
+    </div>
+</section>
+<!-- ✨ Excellence Section -->
+<section class="py-5 text-center" style="background-color: #fdfdfd;">
+    <div class="container">
+        <h2 class="fw-bold mb-3" style="color: #2c3e50;">Inspired By Excellence & Innovation</h2>
+        <p class="text-muted fs-5">We offer a wide range of high quality of teaching and extra-curricular activities.</p>
+        <hr style="width: 60px; margin: 20px auto; border-top: 2px solid #f57c00;">
+    </div>
+</section>
+<!-- 🎓 Courses Overview Section -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row text-center mb-4">
+            <h2 class="fw-bold">Our Nursing Programs</h2>
+            <p class="text-muted">Choose from a wide range of undergraduate, postgraduate, and research-level courses.</p>
+        </div>
+
+        <div class="row g-4">
+            <!-- Card 1 -->
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="/images/phd-nursing.jpg" class="card-img-top" alt="PhD Program">
+                    <div class="card-body">
+                        <h5 class="card-title text-warning fw-bold">Doctor of Philosophy</h5>
+                        <p class="text-muted mb-1"><strong>PhD</strong></p>
+                        <p class="card-text small">
+                            OVERVIEW: The PhD Programme in Nursing was launched with the objective of enabling
+                            the Nursing personnel to develop advanced research skills in nursing and healthcare.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="/images/msc-nursing.jpg" class="card-img-top" alt="MSc Program">
+                    <div class="card-body">
+                        <h5 class="card-title text-warning fw-bold">Master of Science in Nursing (M.Sc. N)</h5>
+                        <p class="text-muted mb-1">Post Graduate Programme</p>
+                        <p class="card-text small"><strong>Duration of Course:</strong> 2 Years</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="/images/bsc-nursing.jpg" class="card-img-top" alt="BSc Program">
+                    <div class="card-body">
+                        <h5 class="card-title text-warning fw-bold">Bachelor of Science in Nursing (B.Sc. N)</h5>
+                        <p class="text-muted mb-1">Undergraduate Programme</p>
+                        <p class="card-text small"><strong>Duration of Course:</strong> 4 Years</p>
+                    </div>
+                </div>
+            </div>
+            <!-- 🔶 Row 2: Single Centered GNM Course -->
+<div class="row justify-content-center mt-4">
+    <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+            <img src="/images/gnm-nursing.jpg" class="card-img-top" alt="GNM Program">
+            <div class="card-body">
+                <h5 class="card-title text-warning fw-bold">General Nursing and Midwifery (GNM)</h5>
+                <p class="text-muted mb-1">Diploma</p>
+                <p class="card-text small"><strong>Duration of Course:</strong> 3 Years</p>
+            </div>
+        </div>
+    </div>
+</div>
+        </div>
+    </div>
+</section>
+<!-- 🔵 Banner Section Like "What is it Like to Study" -->
+<section style="background-color: #2c3e50; color: white; padding: 50px 0;">
+  <div class="container text-center">
+    <h2 class="fw-bold">
+      What is it <span style="color: #ffa726;">Like to Study</span> &amp; Enjoying at <span style="color: #ffa726;">KINS</span>
+    </h2>
+    <p class="text-light">Improving productivity and living standards of the people.</p>
+  </div>
+</section>
+
+<!-- 🔶 Academic Calendar Buttons Section -->
+<section class="py-5">
+  <div class="container text-center">
+    <h3 class="fw-bold mb-4 text-uppercase text-dark">Academic Calendar</h3>
+
+    <div class="row justify-content-center mb-3">
+      <div class="col-md-3 col-sm-6 mb-3">
+        <a href="#" class="btn btn-warning w-100 py-3 fw-bold">Academic Calendar</a>
+      </div>
+      <div class="col-md-3 col-sm-6 mb-3">
+        <a href="#" class="btn btn-warning w-100 py-3 fw-bold">Student Handbook</a>
+      </div>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-md-5">
+        <a href="#" class="btn btn-warning w-100 py-3 fw-bold">Ph. D. Programme Details from 2022 to 2024</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<!-- 🔻 Footer Section -->
+<footer class="bg-light text-dark pt-5 pb-3">
+    <div class="container">
+        <div class="row">
+            <!-- Column 1: Admissions -->
+            <div class="col-md-3 mb-4">
+                <h6 class="fw-bold">Admissions</h6>
+                <ul class="list-unstyled">
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">MOU’s and Collaborations</a></li>
+                    <li><a href="#">Centres of Excellence</a></li>
+                    <li><a href="#">Library</a></li>
+                    <li><a href="#">Contact us</a></li>
+                    <li><a href="#">Testimonials</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 2: Resources -->
+            <div class="col-md-3 mb-4">
+                <h6 class="fw-bold">Resources</h6>
+                <ul class="list-unstyled">
+                    <li><a href="#">SAP Portal</a></li>
+                    <li><a href="#">Grievance Cell</a></li>
+                    <li><a href="#">KIIT Review</a></li>
+                    <li><a href="#">Student Activity Centre</a></li>
+                    <li><a href="#">Anti-Ragging</a></li>
+                    <li><a href="#">Download Logo</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Other Links -->
+            <div class="col-md-3 mb-4">
+                <h6 class="fw-bold">Other Links</h6>
+                <ul class="list-unstyled">
+                    <li><a href="#">Founder</a></li>
+                    <li><a href="#">Jyoti Foundation</a></li>
+                    <li><a href="#">Art of Giving</a></li>
+                    <li><a href="#">KIMS Hospital</a></li>
+                    <li><a href="#">Technology Business Incubator</a></li>
+                    <li><a href="#">JYOTI-ITI</a></li>
+                    <li><a href="#">JYOTI Polytechnic</a></li>
+                    <li><a href="#">JYOTI International School</a></li>
+                    <li><a href="#">Kalarabanka Smart Village</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 4: Address -->
+            <div class="col-md-3 mb-4">
+                <h6 class="fw-bold">ADDRESS FOR COMMUNICATION</h6>
+                <p class="mb-1">
+                    <i class="bi bi-geo-alt-fill"></i> Jyoti Institute of Nursing Sciences,<br>
+                    (JINS), JINS Deemed to be University<br>
+                    Campus-1, Patia, Bhubaneswar 751024
+                </p>
+                <p class="mb-1"><i class="bi bi-telephone-fill"></i> 0674-2725053</p>
+                <p class="mb-1"><i class="bi bi-envelope-fill"></i> info@jyoti.ac.in</p>
+                <p><i class="bi bi-clock-fill"></i> Monday - Friday: 8:00 AM - 10:00 PM</p>
+            </div>
+        </div>
+
+        <!-- Footer bottom -->
+        <div class="text-center pt-3 border-top mt-3">
+            <p class="mb-0">&copy; Copyright 2025 - All Rights Reserved</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
