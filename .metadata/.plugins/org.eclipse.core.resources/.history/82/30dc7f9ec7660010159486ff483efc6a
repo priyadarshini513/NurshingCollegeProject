@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Gallery - Jyoti Nursing College</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"/>
+ 
+    <style>
+        .lab-img {
+            width: 100%;
+            max-height: 450px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .lab-list a {
+            cursor: pointer;
+        }
+        .gallery-img {
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+        .gallery-img:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+<!-- ✅ Top Header Section with Logo and Founder Info -->
+<div style="background: linear-gradient(to right, #1e3c72, #2a5298); color: white; padding: 10px 20px;"
+     class="d-flex justify-content-between align-items-center flex-wrap">
+
+    <!-- 🔗 Left: Go to Jyoti Home Page -->
+    <div class="d-flex align-items-center gap-2 mb-2 mb-md-0">
+        <i class="bi bi-arrow-left-circle-fill fs-5 text-white"></i>
+        <a href="https://kiit.ac.in" target="_blank" class="text-white text-decoration-none fw-bold">
+            GO TO JYOTI HOME PAGE
+        </a>
+    </div>
+
+    <!-- 🌐 Center: Social Icons -->
+    <div class="d-flex gap-3 mb-2 mb-md-0">
+        <a href="https://facebook.com" class="text-white" target="_blank" title="Facebook">
+            <i class="bi bi-facebook fs-5"></i>
+        </a>
+        <a href="https://twitter.com" class="text-white" target="_blank" title="Twitter">
+            <i class="bi bi-twitter fs-5"></i>
+        </a>
+        <a href="https://youtube.com" class="text-white" target="_blank" title="YouTube">
+            <i class="bi bi-youtube fs-5"></i>
+        </a>
+        <a href="https://instagram.com" class="text-white" target="_blank" title="Instagram">
+            <i class="bi bi-instagram fs-5"></i>
+        </a>
+    </div>
+
+    <!-- 👤 Right: Founder Info -->
+    <div class="d-flex align-items-center">
+        <img src="/images/jyotikumar.jpg" alt="Founder"
+             style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;" class="me-2">
+        <div>
+            <strong>Prof.Jyotikumar</strong><br>
+            <small>Founder – JNC</small><br>
+            <a href="https://jyotikumar.com" class="text-white text-decoration-none" target="_blank">jyotikumar.com</a>
+        </div>
+    </div>
+</div>
+<!-- 🔷 Common Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #f57c00;">
+    <div class="container">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navmenu">
+    <ul class="navbar-nav w-100 d-flex justify-content-between text-center">
+    <li class="nav-item flex-fill">
+        <a class="nav-link active fw-bold text-white" th:href="@{/}">HOME</a>
+    </li>
+    <li class="nav-item flex-fill">
+        <a class="nav-link text-white" th:href="@{/about}">ABOUT</a>
+    </li>
+    <li class="nav-item flex-fill">
+        <a class="nav-link text-white" th:href="@{/courses}">ACADEMICS</a>
+    </li>
+    <li class="nav-item dropdown flex-fill">
+        <a class="nav-link text-white dropdown-toggle" href="#" id="admissionDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            ADMISSIONS
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="admissionDropdown">
+            <li>
+                <a class="dropdown-item text-danger fw-bold" th:href="@{/admission}">
+                    <i class="bi bi-box-arrow-in-right me-1"></i> APPLY
+                </a>
+            </li>
+        </ul>
+    </li>
+    <li class="nav-item flex-fill">
+        <a class="nav-link text-white" th:href="@{/news}">EVENTS</a>
+    </li>
+    <li class="nav-item flex-fill">
+        <a class="nav-link text-white" th:href="@{/gallery}">RESEARCH</a>
+    </li>
+    <li class="nav-item flex-fill">
+        <a class="nav-link text-white" th:href="@{/gallery}">PEOPLE</a>
+    </li>
+    <li class="nav-item flex-fill">
+        <a class="nav-link text-white" th:href="@{/contact}">CONTACT US</a>
+    </li>
+</ul>
+    
+</div>
+    </div>
+</nav>
+<!-- 🧪 Gallery Banner Section -->
+<section style="margin-top: 70px; position: relative;">
+    <div class="position-relative text-white">
+        <img src="/images/lab-banner.jpg" alt="Gallery Banner" class="img-fluid w-100"
+             style="height: 500px; object-fit: cover; opacity: 0.85;">
+        <!-- Overlay -->
+    <div style="
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.7);
+    "></div>
+        <!-- 🔽 Centered Title -->
+        <div class="position-absolute top-50 start-50 translate-middle text-center">
+            <h1 class="display-4 fw-bold">Gallery</h1>
+            <p class="fs-5">Home / Gallery</p>
+        </div>
+    </div>
+</section>
+<!-- 🔬 Lab Section (dynamically switchable) -->
+<section class="container py-5">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="list-group lab-list shadow">
+        <a class="list-group-item list-group-item-action active" onclick="showLab('maternal')">👩‍🍼 MATERNAL & CHILD HEALTH LAB</a>
+        <a class="list-group-item list-group-item-action" onclick="showLab('paediatric')">🧒 PAEDIATRIC LAB</a>
+        <a class="list-group-item list-group-item-action" onclick="showLab('nutrition')">🥗 NUTRITION LAB</a>
+        <a class="list-group-item list-group-item-action" onclick="showLab('community')">🏥 COMMUNITY HEALTH NURSING LAB</a>
+        <a class="list-group-item list-group-item-action" onclick="showLab('foundation')">🏫 NURSING FOUNDATION LAB</a>
+        <a class="list-group-item list-group-item-action" onclick="showLab('surgical')">🩺 MEDICAL-SURGICAL NURSING LAB</a>
+        <a class="list-group-item list-group-item-action" onclick="showLab('computer')">💻 COMPUTER LAB</a>
+        <a class="list-group-item list-group-item-action" onclick="showLab('bioscience')">🔬 BIO-SCIENCE LAB</a>
+        <a class="list-group-item list-group-item-action" onclick="showLab('advanced')">🧬 ADVANCED NURSING SKILL LAB</a>
+      </div>
+    </div>
+
+    <div class="col-md-8" id="labContent">
+      <img src="/images/maternal-lab.jpg" alt="Maternal Lab" class="lab-img mb-3">
+      <h3>Maternal & Child Health Lab</h3>
+      <p>AIMS: To appreciate the concepts and principles of midwifery and obstetrical nursing.</p>
+    </div>
+  </div>
+</section>
+
+<script>
+  const labs = {
+    maternal: {
+      title: "Maternal & Child Health Lab",
+      image: "/images/maternal-lab.jpg",
+      desc: "AIMS: To appreciate the concepts and principles of midwifery and obstetrical nursing."
+    },
+    paediatric: {
+      title: "Paediatric Lab",
+      image: "/images/paediatric-lab.jpg",
+      desc: "AIMS: To understand and practice child care techniques including growth monitoring and vaccination training."
+    },
+    nutrition: {
+      title: "Nutrition Lab",
+      image: "/images/nutrition-lab.jpg",
+      desc: "AIMS: To gain knowledge of balanced diets, nutrition assessment, and food preparation."
+    },
+    community: {
+      title: "Community Health Nursing Lab",
+      image: "/images/community-lab.jpg",
+      desc: "AIMS: To develop community health practices and understand outreach services."
+    },
+    foundation: {
+      title: "Nursing Foundation Lab",
+      image: "/images/foundation-lab.jpg",
+      desc: "AIMS: To master fundamental nursing procedures and patient care skills."
+    },
+    surgical: {
+      title: "Medical-Surgical Nursing Lab",
+      image: "/images/surgical-lab.jpg",
+      desc: "AIMS: To learn surgical equipment handling and post-operative nursing."
+    },
+    computer: {
+      title: "Computer Lab",
+      image: "/images/computer-lab.jpg",
+      desc: "AIMS: To develop IT skills including patient record systems and research support."
+    },
+    bioscience: {
+      title: "Bio-Science Lab",
+      image: "/images/bioscience-lab.jpg",
+      desc: "AIMS: To study anatomical models, microbiology, and physiology fundamentals."
+    },
+    advanced: {
+      title: "Advanced Nursing Skill Lab",
+      image: "/images/advanced-lab.jpg",
+      desc: "AIMS: To practice emergency nursing and complex clinical procedures."
+    }
+  };
+
+  function showLab(key) {
+    const lab = labs[key];
+    document.getElementById("labContent").innerHTML = `
+      <img src="${lab.image}" alt="${lab.title}" class="lab-img mb-3">
+      <h3>${lab.title}</h3>
+      <p>${lab.desc}</p>
+    `;
+    document.querySelectorAll('.lab-list a').forEach(item => item.classList.remove('active'));
+    event.target.classList.add('active');
+  }
+</script>
+
+<!-- Full Laboratory Gallery Section -->
+<div class="container mt-5">
+   <h2 class="mb-4 text-center fw-bold" style="font-size: 2.8rem; position: relative; display: inline-block;">
+  Laboratory
+  <span style="display: block; width: 80px; height: 4px; background-color: #f57c00; margin: 8px auto 0; border-radius: 2px;"></span>
+</h2>
+   
+    <div class="row g-4">
+        <div class="col-md-3 col-sm-6">
+            <img src="/images/maternal-lab.jpg" alt="Lab 1" class="img-fluid gallery-img">
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <img src="/images/paediatric-lab.jpg" alt="Lab 2" class="img-fluid gallery-img">
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <img src="/images/nutrition-lab.jpg" alt="Lab 3" class="img-fluid gallery-img">
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <img src="/images/community-lab.jpg" alt="Lab 4" class="img-fluid gallery-img">
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <img src="/images/foundation-lab.jpg" alt="Lab 5" class="img-fluid gallery-img">
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <img src="/images/surgical-lab.jpg" alt="Lab 6" class="img-fluid gallery-img">
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <img src="/images/computer-lab.jpg" alt="Lab 7" class="img-fluid gallery-img">
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <img src="/images/advanced-lab.jpg" alt="Lab 8" class="img-fluid gallery-img">
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

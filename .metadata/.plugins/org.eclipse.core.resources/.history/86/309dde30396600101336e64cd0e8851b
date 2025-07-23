@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Admissions - Jyoti Nursing College</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        .admissions-hero {
+            background: url('/images/nurse.jpg') no-repeat center center;
+            background-size: cover;
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            position: relative;
+        }
+        .admissions-hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .admissions-hero .content {
+            position: relative;
+            z-index: 2;
+        }
+        .section-title {
+            font-weight: bold;
+            color: #343a40;
+        }
+        .admission-box {
+            background-color: #fff;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- 🔷 Split Hero Section -->
+<section class="admissions-hero d-flex">
+    <!-- Left Side: Admission Notice Box -->
+    <div class="left-box p-4 d-flex align-items-center justify-content-center">
+        <div class="bg-white text-dark p-4 rounded shadow" style="max-width: 90%;">
+            <h5 class="fw-bold text-primary text-center">ADMISSION</h5>
+            <p><strong>CERTIFICATE COURSE ON:</strong></p>
+            <ul>
+                <li>Dialysis Nursing</li>
+                <li>Emergencies in Neuroscience Nursing</li>
+                <li>Perioperative Nursing</li>
+                <li>Critical Care Nursing</li>
+            </ul>
+            <hr>
+            <p><strong>Seats:</strong> 30 each program<br>
+               <strong>Duration:</strong> 6 Months<br>
+               <strong>Fee:</strong> ₹30,000 + ₹5,000 Admission<br>
+               <strong>Hostel:</strong> ₹10,000 | <strong>Mess:</strong> ₹22,500
+            </p>
+        </div>
+    </div>
+
+    <!-- Right Side: Background Image with Overlayed Text -->
+    <div class="right-hero position-relative text-white d-flex align-items-center justify-content-center">
+        <div class="overlay position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(0, 0, 0, 0.5);"></div>
+        <div class="text-center position-relative px-4">
+            <h1 class="display-5 fw-bold">Certificate Course on</h1>
+            <p class="lead">Dialysis Nursing<br>
+            Emergencies in Neuroscience Nursing<br>
+            Perioperative Nursing<br>
+            Critical Care Nursing</p>
+            <p>Contact: 0674-7105335 / 2725053 | Mobile: 93489 24618<br>Email: principal.con@kins.ac.in</p>
+        </div>
+    </div>
+</section>
+
+ 
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<!-- 💳 Payment Bank Link Section -->
+<div class="container mt-5 mb-5">
+    <div class="admission-box">
+        <h4 class="section-title">Payment Information</h4>
+        <p>
+            You can make your payment via:
+        </p>
+        <ul>
+            <li><strong>Bank Name:</strong> Punjab National Bank</li>
+            <li><strong>Account Holder Name:</strong> Jyoti Nursing College</li>
+            <li><strong>Account Number:</strong> 12345678901234</li>
+            <li><strong>IFSC Code:</strong> PUNB0123456</li>
+            <li><strong>UPI ID (for Google Pay / PhonePe / Paytm):</strong> <code>jyoticollege@pnb</code></li>
+        </ul>
+        <p class="fw-bold text-danger">Note: Mention your full name and course while making the payment for reference.</p>
+        <a href="https://paytm.com/education" target="_blank" class="btn btn-primary mt-2">
+            Pay Online via Bank Portal
+        </a>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Admissions - Jyoti Nursing College</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        .admissions-hero {
+            background: url('/images/nurse_bg.jpg') no-repeat center center;
+            background-size: cover;
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            position: relative;
+        }
+        .admissions-hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .admissions-hero .content {
+            position: relative;
+            z-index: 2;
+        }
+        .section-title {
+            font-weight: bold;
+            color: #343a40;
+        }
+        .admission-box {
+            background-color: #fff;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- 🔷 Hero Section with Background -->
+<section class="admissions-hero">
+    <div class="content">
+        <h1 class="display-5 fw-bold">Certificate Courses</h1>
+        <p class="lead">Dialysis Nursing | Emergencies in Neuroscience Nursing | Perioperative Nursing | Critical Care Nursing</p>
+        <p>Contact: 0674-7105335 / 2725053 | Mobile: 93489 24618<br>Email: principal.con@kins.ac.in</p>
+    </div>
+</section>
+
+<!-- 🔸 Main Info Section -->
+<div class="container mt-5">
+    <div class="row g-4">
+        <!-- 📌 Left Info Panel -->
+        <div class="col-md-6">
+            <div class="admission-box">
+                <h4 class="section-title">Academic Session: 2022-23</h4>
+                <ul>
+                    <li>Seats: 30 (Each Program)</li>
+                    <li>Duration: 6 Months</li>
+                </ul>
+
+                <h4 class="section-title mt-3">Eligibility</h4>
+                <ul>
+                    <li>Registered General Nursing Midwifery (GNM)</li>
+                    <li>Registered B.Sc Nursing with any State Nursing Council</li>
+                </ul>
+
+                <h4 class="section-title mt-3">Fee Structure</h4>
+                <ul>
+                    <li>Course Fee: ₹30,000</li>
+                    <li>Admission Fee: ₹5,000</li>
+                    <li>Apply Before: 30-Nov-2022</li>
+                    <li>Admission Process: 10-Dec-2022</li>
+                    <li>Commencement: 12-Dec-2022</li>
+                </ul>
+
+                <h4 class="section-title mt-3">Hostel & Mess</h4>
+                <ul>
+                    <li>Hostel: ₹10,000 / 6 Months</li>
+                    <li>Mess: ₹22,500 / 6 Months</li>
+                </ul>
+
+                <h4 class="section-title mt-3">Payment</h4>
+                <p>Mode: Bank Draft / NEFT / RTGS / Internet Banking</p>
+
+                <div class="text-center mt-4">
+                    <a href="/admission-form" class="btn btn-danger btn-lg">Apply Now</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 📘 Right Info Panel -->
+        <div class="col-md-6">
+            <div class="admission-box">
+                <h4 class="section-title">Available Programs</h4>
+                <ul>
+                    <li><strong>Diploma:</strong> Dialysis, Critical Care</li>
+                    <li><strong>Graduate:</strong> B.Sc. Nursing</li>
+                    <li><strong>Postgraduate:</strong> M.Sc. Nursing (coming soon)</li>
+                </ul>
+
+                <h4 class="section-title mt-4">Contact Details</h4>
+                <p>
+                    <strong>Phone:</strong> 0674-7105335 / 2725053<br>
+                    <strong>Mobile:</strong> 93489 24618<br>
+                    <strong>Email:</strong> principal.con@kins.ac.in<br>
+                    <strong>Website:</strong> <a href="https://kins.ac.in" target="_blank">kins.ac.in</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

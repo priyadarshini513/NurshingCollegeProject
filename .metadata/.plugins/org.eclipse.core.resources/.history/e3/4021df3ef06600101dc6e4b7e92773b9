@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Publications</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        .publications-banner {
+            background-color: #262d3f;
+            color: white;
+            padding: 100px 0 60px 0;
+            text-align: center;
+        }
+        .publications-banner h1 {
+            font-size: 3.5rem;
+            font-weight: bold;
+        }
+        .breadcrumb-text {
+            font-size: 1rem;
+            margin-top: 10px;
+            color: #ccc;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Banner Section -->
+    <section class="publications-banner">
+        <h1>Publications</h1>
+        <div class="breadcrumb-text">Home / Publications</div>
+    </section>
+
+    <!-- Content (you can add real publication data here) -->
+    <div class="container mt-5 mb-5">
+        <h3 class="text-center mb-4">List of Research Publications</h3>
+        <ul class="list-group">
+            <li class="list-group-item">📘 2025 - Study on Pediatric Care by Faculty X</li>
+            <li class="list-group-item">📘 2024 - Advances in Nursing Practices in Odisha</li>
+            <li class="list-group-item">📘 2023 - Infection Control Strategies in Clinical Settings</li>
+        </ul>
+    </div>
+
+    <!-- Bootstrap JS (optional for dropdowns etc.) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

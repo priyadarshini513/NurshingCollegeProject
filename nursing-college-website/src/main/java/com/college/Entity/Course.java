@@ -1,0 +1,20 @@
+package com.college.Entity;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity
+public class Course {
+	 @Id
+	    @GeneratedValue(strategy = GenerationType.IDENTITY)
+	    private Long id;
+
+	    private String courseName;     // e.g., B.Sc Nursing
+	    private String duration;       // e.g., 4 Years
+	    private String eligibility;    // e.g., 10+2 Science with Biology
+	    private String description;    // detailed info about the course
+	    private String fees; 
+
+}

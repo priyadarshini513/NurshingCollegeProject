@@ -1,0 +1,95 @@
+package com.college.Controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import com.college.Entity.Admission;
+import com.college.Entity.Course;
+import com.college.Repository.AdmissionRepository;
+import com.college.Service.CourseService;
+
+@Controller
+public class CollegeController {
+
+	@Autowired
+	private CourseService courseService;
+
+	@Autowired
+	private AdmissionRepository admissionRepository;
+
+	@GetMapping("/")
+	public String home(Model model) {
+		model.addAttribute("newsTicker", "Admissions Open for B.Sc, GNM, and M.Sc Nursing | Apply Now!");
+		return "index";
+	}
+
+	@GetMapping("/about")
+	public String about() {
+		return "about";
+	}
+
+	@GetMapping("/courses")
+	public String showCourses(Model model) {
+		List<Course> courseList = courseService.getAllCourses();
+		model.addAttribute("courses", courseList);
+		return "courses";
+	}
+
+	@GetMapping("/admission")
+	public String admission() {
+		return "admission";
+	}
+
+	@PostMapping("/admission/save")
+	public String saveAdmission(@ModelAttribute Admission admission) {
+		admissionRepository.save(admission);
+		return "redirect:/admission?success";
+	}
+
+	@GetMapping("/gallery")
+	public String gallery() {
+		return "gallery";
+	}
+
+	@GetMapping("/contact")
+	public String contact() {
+		return "contact";
+	}
+
+	@GetMapping("/academic")
+	public String academicPage() {
+		return "academic"; // this should match the filename
+	}
+
+	@GetMapping("/events")
+	public String showEventsPage() {
+		return "events"; // this matches events.html file name
+	}
+	 @GetMapping("/research")
+	    public String showResearchPage() {
+	        return "research"; // loads research.html
+	    }
+
+
+	@GetMapping("/publications")
+	public String showPublicationsPage() {
+		return "publications";
+	}
+
+	@GetMapping("/research-list")
+	public String showResearchListPage() {
+		return "research-list";
+	}
+
+	@GetMapping("/thesis")
+	public String showThesisPage() {
+		return "thesis";
+	}
+}

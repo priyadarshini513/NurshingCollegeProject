@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Publications</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        .publications-banner {
+            background-color: #262d3f;
+            color: white;
+            padding: 100px 0 60px 0;
+            text-align: center;
+        }
+        .publications-banner h1 {
+            font-size: 3.5rem;
+            font-weight: bold;
+        }
+        .breadcrumb-text {
+            font-size: 1rem;
+            margin-top: 10px;
+            color: #ccc;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Banner Section -->
+    <section class="publications-banner">
+        <h1>Publications</h1>
+        <div class="breadcrumb-text">Home / Publications</div>
+    </section>
+
+	
+    <!-- Content (you can add real publication data here) -->
+    <div class="container my-5">
+    <h2 class="text-center fw-bold mb-4">Faculty Publication List</h2>
+    <table class="table table-bordered table-striped">
+        <thead class="table-dark">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Publication</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>
+                    Mohanty, N., Das, N., Sahoo, R. K., Ahmed, S., & Jena, P. K. (2025). Empowering compassion: A systematic review of palliative care education and training program outcomes for nursing professionals. <br>
+                    <em>Journal of Mechanics of Continuums and Mathematical Sciences, 20(2).</em><br>
+                    <a href="https://doi.org/10.26782/jmcms.2025.02.00004" target="_blank">https://doi.org/10.26782/jmcms.2025.02.00004</a>
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>
+                    Mohapatra, S. S., Nayak, M., Dash, R., Mall, M., & Nayak, J. (2025). A Descriptive Study to Assess the Correlation Between Nomophobia, Insomnia, And Self-Esteem on Smartphone Addiction. <br>
+                    <em>Journal of Neonatal Surgery, 14(8S).</em><br>
+                    <a href="https://doi.org/10.52783/jns.v14.2506" target="_blank">https://doi.org/10.52783/jns.v14.2506</a>
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>
+                    Bhatta, P., Rath, K., & Behera, A. (2025). A qualitative study on hormone replacement therapy in a teaching institution. <br>
+                    <em>Journal of Family Medicine and Primary Care, 14(4), 1547–1552.</em><br>
+                    <a href="https://doi.org/10.4103/jfmpc.jfmpc_481_24" target="_blank">https://doi.org/10.4103/jfmpc.jfmpc_481_24</a>
+                </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>
+                    Sonalika, S., Williams, J. D. M., & Kumar, S. (2025). Digital detoxification for adolescents. <br>
+                    <em>Journal of Mechanics of Continuums and Mathematical Sciences, 20(3).</em><br>
+                    <a href="https://doi.org/10.26782/jmcms.2025.03.00011" target="_blank">https://doi.org/10.26782/jmcms.2025.03.00011</a>
+                </td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>
+                    Sonalika, S., Williams, J. D. M., & Kumar, S. (2025). Digital detoxification for adolescents. <br>
+                    <em>Journal of Mechanics of Continuums and Mathematical Sciences, 20(3).</em><br>
+                    <a href="https://doi.org/10.26782/jmcms.2025.03.00011" target="_blank">https://doi.org/10.26782/jmcms.2025.03.00011</a>
+                </td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>
+                    Sonalika, S., Williams, J. D. M., & Kumar, S. (2025). Digital detoxification for adolescents. <br>
+                    <em>Journal of Mechanics of Continuums and Mathematical Sciences, 20(3).</em><br>
+                    <a href="https://doi.org/10.26782/jmcms.2025.03.00011" target="_blank">https://doi.org/10.26782/jmcms.2025.03.00011</a>
+                </td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>
+                    Sonalika, S., Williams, J. D. M., & Kumar, S. (2025). Digital detoxification for adolescents. <br>
+                    <em>Journal of Mechanics of Continuums and Mathematical Sciences, 20(3).</em><br>
+                    <a href="https://doi.org/10.26782/jmcms.2025.03.00011" target="_blank">https://doi.org/10.26782/jmcms.2025.03.00011</a>
+                </td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>
+                    Sonalika, S., Williams, J. D. M., & Kumar, S. (2025). Digital detoxification for adolescents. <br>
+                    <em>Journal of Mechanics of Continuums and Mathematical Sciences, 20(3).</em><br>
+                    <a href="https://doi.org/10.26782/jmcms.2025.03.00011" target="_blank">https://doi.org/10.26782/jmcms.2025.03.00011</a>
+                </td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>
+                    Sonalika, S., Williams, J. D. M., & Kumar, S. (2025). Digital detoxification for adolescents. <br>
+                    <em>Journal of Mechanics of Continuums and Mathematical Sciences, 20(3).</em><br>
+                    <a href="https://doi.org/10.26782/jmcms.2025.03.00011" target="_blank">https://doi.org/10.26782/jmcms.2025.03.00011</a>
+                </td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>
+                    Sonalika, S., Williams, J. D. M., & Kumar, S. (2025). Digital detoxification for adolescents. <br>
+                    <em>Journal of Mechanics of Continuums and Mathematical Sciences, 20(3).</em><br>
+                    <a href="https://doi.org/10.26782/jmcms.2025.03.00011" target="_blank">https://doi.org/10.26782/jmcms.2025.03.00011</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+    
+
+    <!-- Bootstrap JS (optional for dropdowns etc.) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

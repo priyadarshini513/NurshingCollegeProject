@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Jyoti Nursing College</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    
+
+    <!-- Bootstrap 5 CDN -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+	
+    <!-- ✅ Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+  .hero {
+  height: 100vh;
+  background: url('/images/banner.jpg') no-repeat center center fixed;
+  background-size: cover;
+  position: relative;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-content {
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.4); /* Optional dark overlay */
+  padding: 30px;
+  border-radius: 10px;
+}
+
+        .navbar-brand img {
+            height: 50px;
+        }
+
+        .navbar-orange {
+            background-color: #ff7f00;
+        }
+        .nav-link {
+    padding: 14px 0;
+    font-weight: 600;
+}
+
+        .hero h1 {
+            font-size: 48px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px #000;
+        }
+
+        .hero p {
+            font-size: 20px;
+            font-weight: 500;
+            text-shadow: 1px 1px 3px #000;
+        }
+
+        .hero .btn {
+            font-size: 18px;
+            margin: 10px;
+        }
+        /* Ensure dropdown works on hover without JS */
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0; /* removes dropdown jump */
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.3s ease;
+}
+
+/* Optional: Style the dropdown */
+.custom-dropdown {
+    display: none;
+    position: absolute;
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    z-index: 999;
+    min-width: 180px;
+}
+.custom-dropdown .dropdown-item {
+    padding: 10px 15px;
+    color: #333;
+}
+.custom-dropdown .dropdown-item:hover {
+    background-color: #f3f3f3;
+}
+        
+    </style>
+    
+</head>
+<body>
+<!-- ✅ Top Header Section with Logo and Founder Info -->
+<div style="background: linear-gradient(to right, #1e3c72, #2a5298); color: white; padding: 10px 20px;"
+     class="d-flex justify-content-between align-items-center flex-wrap">
+
+    <!-- 🔗 Left: Go to Jyoti Home Page -->
+    <div class="d-flex align-items-center gap-2 mb-2 mb-md-0">
+        <i class="bi bi-arrow-left-circle-fill fs-5 text-white"></i>
+        <a href="https://kiit.ac.in" target="_blank" class="text-white text-decoration-none fw-bold">
+            GO TO JYOTI HOME PAGE
+        </a>
+    </div>
+
+    <!-- 🌐 Center: Social Icons -->
+    <div class="d-flex gap-3 mb-2 mb-md-0">
+        <a href="https://facebook.com" class="text-white" target="_blank" title="Facebook">
+            <i class="bi bi-facebook fs-5"></i>
+        </a>
+        <a href="https://twitter.com" class="text-white" target="_blank" title="Twitter">
+            <i class="bi bi-twitter fs-5"></i>
+        </a>
+        <a href="https://youtube.com" class="text-white" target="_blank" title="YouTube">
+            <i class="bi bi-youtube fs-5"></i>
+        </a>
+        <a href="https://instagram.com" class="text-white" target="_blank" title="Instagram">
+            <i class="bi bi-instagram fs-5"></i>
+        </a>
+    </div>
+
+    <!-- 👤 Right: Founder Info -->
+    <div class="d-flex align-items-center">
+        <img src="/images/jyotikumar.jpg" alt="Founder"
+             style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;" class="me-2">
+        <div>
+            <strong>Prof.Jyotikumar</strong><br>
+            <small>Founder – JNC</small><br>
+            <a href="https://jyotikumar.com" class="text-white text-decoration-none" target="_blank">jyotikumar.com</a>
+        </div>
+    </div>
+</div>
+<!-- ✅ College Logo and Name Strip -->
+<div class="bg-white py-2 px-3 d-flex justify-content-between align-items-center border-bottom">
+    <!-- Left: Logo + Name -->
+    <div class="d-flex align-items-center gap-3">
+        <img src="/images/logo.jpg" alt="College Logo" style="height: 60px;">
+        <div>
+            <h5 class="mb-0 text-dark fw-bold">JYOTI NURSING COLLEGE</h5>
+            <small class="text-muted">Affiliated to XYZ University | Est. 2020</small>
+        </div>
+    </div>
+</div>
+
+
+<!-- Top Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #f57c00; width: 100%;">
+
+    <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navmenu">
+    <ul class="navbar-nav w-100 d-flex justify-content-between text-center">
+    <li class="nav-item flex-fill">
+        <a class="nav-link active fw-bold text-white" th:href="@{/}">HOME</a>
+    </li>
+    <li class="nav-item flex-fill">
+        <a class="nav-link text-white" th:href="@{/about}">ABOUT</a>
+    </li>
+    <li class="nav-item flex-fill">
+        <a class="nav-link text-white" th:href="@{/courses}">ACADEMICS</a>
+    </li>
+    <li class="nav-item dropdown flex-fill">
+        <a class="nav-link text-white dropdown-toggle" href="#" id="admissionDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            ADMISSIONS
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="admissionDropdown">
+            <li>
+                <a class="dropdown-item text-danger fw-bold" th:href="@{/admission}">
+                    <i class="bi bi-box-arrow-in-right me-1"></i> APPLY
+                </a>
+            </li>
+        </ul>
+    </li>
+     <li class="nav-item flex-fill">
+        <a class="nav-link text-white" th:href="@{/gallery}">LABORATORY</a>
+    </li>
+    <li class="nav-item flex-fill">
+        <a class="nav-link text-white" th:href="@{/events}">EVENTS</a>
+    </li>
+    <li class="nav-item dropdown flex-fill position-relative">
+    <!-- 🔹 RESEARCH Link — clickable -->
+    <a class="nav-link fw-bold text-white" href="/research" id="researchDropdown">
+        RESEARCH
+    </a>
+
+    <!-- 🔹 Dropdown Toggler Icon (Caret only) -->
+    <a class="nav-link dropdown-toggle text-white position-absolute" 
+       style="right: 0; top: 0; height: 100%; width: 30px;" 
+       href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    </a>
+
+    <!-- 🔻 Dropdown Menu -->
+    <ul class="dropdown-menu" aria-labelledby="researchDropdown">
+        <li><a class="dropdown-item" href="/publications">Publications</a></li>
+        <li><a class="dropdown-item" href="/research-list">Research List</a></li>
+        <li><a class="dropdown-item" href="/thesis">Thesis</a></li>
+    </ul>
+</li>
+    
+    <li class="nav-item flex-fill">
+        <a class="nav-link text-white" th:href="@{/people}">PEOPLE</a>
+    </li>
+    <li class="nav-item flex-fill">
+        <a class="nav-link text-white" th:href="@{/contact}">CONTACT US</a>
+    </li>
+</ul>    
+</div>
+ </div>
+</nav>
+<!-- Hero Section with Background Image -->
+<div class="hero-section text-center text-white d-flex align-items-center justify-content-center"
+     style="background: url('/images/banner.jpg') no-repeat center center; background-size: cover; height: 400px;">
+    <div>
+        <h1 class="fw-bold display-5 text-shadow">An exemplary learning community</h1>
+        <p class="lead text-shadow">Innovative Education and Research for a Healthier Society</p>
+        <div class="mt-4">
+            <a href="#" class="btn btn-warning me-3 fw-bold">FIND A COURSE</a>
+            <a href="#" class="btn btn-success fw-bold">APPLY NOW</a>
+        </div>
+    </div>
+</div>
+
+<!-- Scrolling News Ticker -->
+<div class="bg-warning py-2">
+    <marquee behavior="scroll" direction="left" scrollamount="5">
+        Admissions Open for B.Sc, M.Sc, and GNM Nursing Courses | Limited Seats Available | Apply Now via Online Form | Contact us for campus visit and counseling.
+    </marquee>
+</div>
+<!-- Course Highlights Section (Gradient Cards) -->
+<section class="py-5" style="background: linear-gradient(90deg, #43cea2, #185a9d); color: white;">
+    <div class="container text-center">
+        <h2 class="mb-5">Explore Our Certificate Programs</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="p-4 shadow rounded" style="background: rgba(255,255,255,0.1);">
+                    <h4 class="fw-bold">Critical Care Course in ICU Nursing</h4>
+                    <p>(06 Months Program)</p>
+                    <a href="/images/courses/icu-nursing.jpg" target="_blank" class="btn btn-warning text-white mt-2">View</a>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="p-4 shadow rounded" style="background: rgba(255,255,255,0.1);">
+                    <h4 class="fw-bold">Critical Care Course in Neuroscience Nursing</h4>
+                    <p>(11 Months Program)</p>
+                    <a href="/images/courses/neuro-nursing.jpg" target="_blank" class="btn btn-warning text-white mt-2">View</a>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="p-4 shadow rounded" style="background: rgba(255,255,255,0.1);">
+                    <h4 class="fw-bold">Critical Care Course in Gastroenterology Nursing</h4>
+                    <p>(11 Months Program)</p>
+                    <a href="/images/courses/gastro-nursing.jpg" target="_blank" class="btn btn-warning text-white mt-2">View</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Why Choose the College Section -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <h2 class="fw-bold mb-4">Why Choose Jyoti Nursing College?</h2>
+                <p>Jyoti Nursing College is located in Bhubaneswar, Odisha. Established to provide quality nursing education, our institution is affiliated with a reputed university and accredited by INC. We offer B.Sc, GNM, and M.Sc Nursing programs supported by highly qualified faculty and excellent infrastructure.</p>
+                <p>Our campus includes facilities such as a library, laboratories, hostel, computer center, canteen, and access to hospital training. We are committed to holistic nursing education, community engagement, and research excellence.</p>
+            </div>
+            <div class="col-md-6">
+    <img src="/images/college-entrance.jpg" class="rounded shadow"
+         alt="College Entrance"
+         style="width: 110%; max-width: 110%; height: auto;">
+</div>
+        </div>
+    </div>
+</section>
+<!-- WORLD CLASS FACILITIES + OUR VALUES Section -->
+<section class="py-5" style="background-color: #f9f6f6;">
+  <div class="container">
+    <div class="row">
+    
+      <!-- LEFT: World Class Facilities -->
+      <div class="col-md-6 mb-4 mb-md-0">
+        <h3 class="fw-bold text-uppercase mb-3">WORLD CLASS FACILITIES</h3>
+        <p style="text-align: justify; font-size: 16px; line-height: 1.8;">
+          JINS was inspected by INC in the year 2005 and permitted annual intake of 30 students for GNM program.
+          1st batch GNM was admitted in the year 2008-2009 academic session. In 2010 GNM seat was enhanced from 30 to 50 students.
+          Thus 50 students were admitted in the 2010-2011 session.
+          Basic B.Sc, 4 years degree program was started from 2010-2011 session after approval of INC with annual intake of 40 students.
+          In 2012-13 session, 2 year Post Graduate Nursing degree was started with four specialties from the academic session 2012.
+          The B.Sc Nursing seat was enhanced from 40-60 annual intake.
+        </p>
+      </div>
+
+      <!-- RIGHT: Our Values -->
+      <div class="col-md-6">
+        <h3 class="fw-bold text-uppercase" style="color: #2c2c2c;">Our Values</h3>
+        <div class="list-group shadow mt-3">
+          <a href="/inquiry" class="list-group-item list-group-item-action d-flex align-items-center justify-content-between">
+            <span><i class="bi bi-check-circle-fill text-success me-2"></i> Inquire Now</span>
+            <i class="bi bi-arrow-right"></i>
+          </a>
+          <a href="/visit" class="list-group-item list-group-item-action d-flex align-items-center justify-content-between">
+            <span><i class="bi bi-check-circle-fill text-success me-2"></i> Schedule a Visit</span>
+            <i class="bi bi-arrow-right"></i>
+          </a>
+          <a href="/tours" class="list-group-item list-group-item-action d-flex align-items-center justify-content-between">
+            <span><i class="bi bi-check-circle-fill text-success me-2"></i> Campus Tours</span>
+            <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Campus Life Grid Section -->
+<section class="py-5">
+    <div class="container">
+        <h2 class="text-center fw-bold mb-5">Campus Life at Jyoti Nursing College</h2>
+        <div class="row">
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="card border-0 shadow">
+                    <img src="/images/alumni.jpg" class="card-img-top" alt="Alumni">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Alumni</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="card border-0 shadow">
+                    <img src="/images/campus_tour.jpg" class="card-img-top" alt="Campus Tour">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Campus Tour</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="card border-0 shadow">
+                    <img src="/images/sports.jpg" class="card-img-top" alt="Sports">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Sports</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="card border-0 shadow">
+                    <img src="/images/facility.jpg" class="card-img-top" alt="Facility">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Facility</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- News & Events Simple List -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center fw-bold mb-4">Latest News & Events</h2>
+
+        <!-- Event 1 -->
+        <div class="row mb-4 align-items-center">
+            <div class="col-md-4">
+                <img src="/images/conference.jpg" class="img-fluid rounded" alt="Conference">
+            </div>
+            <div class="col-md-8">
+                <h5>
+                    <i class="bi bi-megaphone text-danger me-2"></i>
+                    <a href="https://kins.kiit.ac.in/international-conference-2024" class="text-decoration-none fw-bold" target="_blank">
+                        3rd International Conference on Nursing
+                    </a>
+                </h5>
+                <p class="text-muted">14th July 2024</p>
+            </div>
+        </div>
+
+        <!-- Event 2 -->
+        <div class="row mb-4 align-items-center">
+            <div class="col-md-4">
+                <img src="/images/womens-health.jpg" class="img-fluid rounded" alt="Women's Health Seminar">
+            </div>
+            <div class="col-md-8">
+                <h5>
+                    <i class="bi bi-megaphone text-danger me-2"></i>
+                    <a href="https://kins.kiit.ac.in/seminar-womens-health" class="text-decoration-none fw-bold" target="_blank">
+                        Seminar on Women’s Health
+                    </a>
+                </h5>
+                <p class="text-muted">7th June 2024</p>
+            </div>
+        </div>
+
+        <!-- Event 3 -->
+        <div class="row mb-4 align-items-center">
+            <div class="col-md-4">
+                <img src="/images/blood-donation.jpg" class="img-fluid rounded" alt="Blood Donation Camp">
+            </div>
+            <div class="col-md-8">
+                <h5>
+                    <i class="bi bi-megaphone text-danger me-2"></i>
+                    <a href="https://kins.kiit.ac.in/blood-donation-camp-2024" class="text-decoration-none fw-bold" target="_blank">
+                        Blood Donation Camp by B.Sc Nursing
+                    </a>
+                </h5>
+                <p class="text-muted">28th May 2024</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Footer Section -->
+<footer class="bg-dark text-white pt-5 pb-3">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <h5 class="fw-bold">Admission</h5>
+                <ul class="list-unstyled">
+                    <li><a href="/admission" class="text-white text-decoration-none">Apply Online</a></li>
+                    <li><a href="/courses" class="text-white text-decoration-none">Courses Offered</a></li>
+                    <li><a href="/contact" class="text-white text-decoration-none">Fee Structure</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4 mb-4">
+                <h5 class="fw-bold">Resources</h5>
+                <ul class="list-unstyled">
+                    <li><a href="/gallery" class="text-white text-decoration-none">Campus Gallery</a></li>
+                    <li><a href="/news" class="text-white text-decoration-none">Latest News</a></li>
+                    <li><a href="/about" class="text-white text-decoration-none">About Us</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4 mb-4">
+                <h5 class="fw-bold">Contact Info</h5>
+                <p class="mb-1">Jyoti Nursing College</p>
+                <p class="mb-1">Adashpur, Odisha, 754011</p>
+                <p class="mb-1">Phone: +91-9876543210</p>
+                <p>Email: info@jyotinursing.ac.in</p>
+            </div>
+        </div>
+        <hr class="border-secondary">
+        <div class="text-center">© 2025 Jyoti Nursing College. All rights reserved.</div>
+    </div>
+</footer>
+
+<!-- Gallery Section -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center fw-bold mb-5">Campus Gallery</h2>
+        <div id="galleryCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="/images/campus.jpg" class="d-block w-100" alt="Campus Image 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="/images/lab.jpg" class="d-block w-100" alt="Campus Image 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="/images/cultural.jpg" class="d-block w-100" alt="Campus Image 3">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#galleryCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- Footer Section -->
+<footer class="bg-dark text-white pt-5 pb-4">
+    <div class="container text-center text-md-left">
+        <div class="row text-center text-md-left">
+            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Jyoti Nursing College</h5>
+                <p>Empowering the next generation of healthcare professionals through quality nursing education.</p>
+            </div>
+
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Quick Links</h5>
+                <p><a href="/" class="text-white" style="text-decoration: none;">Home</a></p>
+                <p><a href="/about" class="text-white" style="text-decoration: none;">About</a></p>
+                <p><a href="/courses" class="text-white" style="text-decoration: none;">Courses</a></p>
+                <p><a href="/admission" class="text-white" style="text-decoration: none;">Admission</a></p>
+            </div>
+
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Resources</h5>
+                <p><a href="/gallery" class="text-white" style="text-decoration: none;">Gallery</a></p>
+                <p><a href="/contact" class="text-white" style="text-decoration: none;">Contact</a></p>
+                <p><a href="#" class="text-white" style="text-decoration: none;">FAQs</a></p>
+                <p><a href="#" class="text-white" style="text-decoration: none;">Terms</a></p>
+            </div>
+
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Contact</h5>
+                <p><i class="fas fa-home mr-3"></i> Bhubaneswar, Odisha - 751002</p>
+                <p><i class="fas fa-envelope mr-3"></i> info@jyotinursingcollege.ac.in</p>
+                <p><i class="fas fa-phone mr-3"></i> +91 8908141428</p>
+            </div>
+        </div>
+
+        <hr class="mb-4">
+
+        <div class="row align-items-center">
+            <div class="col-md-7 col-lg-8">
+                <p>© 2024 Jyoti Nursing College. All Rights Reserved.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- World-Class Facilities & Call-to-Action Cards -->
+<section class="py-5 text-white" style="background: #2c3e50;">
+    <div class="container">
+        <h2 class="text-center fw-bold mb-5">World-Class Facilities</h2>
+        <div class="row mb-5">
+            <div class="col-md-6">
+                <p class="lead">Jyoti Nursing College offers a wide range of facilities to support academic and personal development. These include:</p>
+                <ul>
+                    <li>Fully equipped laboratories for clinical training</li>
+                    <li>24/7 library access with digital resources</li>
+                    <li>On-campus hostel with safe and secure accommodation</li>
+                    <li>Smart classrooms with multimedia aids</li>
+                    <li>Wi-Fi enabled campus and computer center</li>
+                    <li>Cafeteria and sports facilities for holistic well-being</li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <img src="/images/facility-campus.jpg" class="img-fluid rounded shadow" alt="Facilities">
+            </div>
+        </div>
+        <div class="row text-center">
+            <div class="col-md-4 mb-3">
+                <div class="card bg-warning text-white h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Inquire Now</h5>
+                        <p class="card-text">Contact us to learn more about our programs and admissions.</p>
+                        <a href="/contact" class="btn btn-light">Get in Touch</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card bg-success text-white h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Schedule a Visit</h5>
+                        <p class="card-text">Plan a guided campus visit with our admission counselors.</p>
+                        <a href="/admission" class="btn btn-light">Book Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card bg-primary text-white h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Campus Tour</h5>
+                        <p class="card-text">Take a virtual or in-person tour of our world-class facilities.</p>
+                        <a href="/gallery" class="btn btn-light">Explore</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const dropdowns = document.querySelectorAll('.dropdown-toggle');
+        dropdowns.forEach(function (dropdownToggleEl) {
+            new bootstrap.Dropdown(dropdownToggleEl);
+        });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Admissions - Jyoti Nursing College</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        .admissions-hero {
+            background: url('/images/nurse.jpg') no-repeat center center;
+            background-size: cover;
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            position: relative;
+        }
+        .admissions-hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .admissions-hero .content {
+            position: relative;
+            z-index: 2;
+        }
+        .section-title {
+            font-weight: bold;
+            color: #343a40;
+        }
+        .admission-box {
+            background-color: #fff;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- 🔷 Hero Section with Background -->
+<section class="admissions-hero">
+    <div class="content">
+        <h1 class="display-5 fw-bold">Certificate Courses</h1>
+        <p class="lead">Dialysis Nursing | Emergencies in Neuroscience Nursing | Perioperative Nursing | Critical Care Nursing</p>
+        <p>Contact: 0674-7105335 / 2725053 | Mobile: 93489 24618<br>Email: principal.con@kins.ac.in</p>
+    </div>
+</section>
+
+<!-- 🔽 Available Programs Section -->
+<div class="container my-5">
+    <h2 class="section-title mb-4">Available Programs</h2>
+
+    <!-- Diploma Programs -->
+    <div class="accordion mb-3" id="programsAccordion">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingDiploma">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDiploma" aria-expanded="false" aria-controls="collapseDiploma">
+                    + Diploma Programs
+                </button>
+            </h2>
+            <div id="collapseDiploma" class="accordion-collapse collapse" aria-labelledby="headingDiploma" data-bs-parent="#programsAccordion">
+                <div class="accordion-body">
+                    <ul>
+                        <li>Dialysis Nursing</li>
+                        <li>Critical Care Nursing</li>
+                        <li>Emergency Care Nursing</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Graduate Programs -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingGraduate">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseGraduate" aria-expanded="false" aria-controls="collapseGraduate">
+                    + Graduate Programs
+                </button>
+            </h2>
+            <div id="collapseGraduate" class="accordion-collapse collapse" aria-labelledby="headingGraduate" data-bs-parent="#programsAccordion">
+                <div class="accordion-body">
+                    <ul>
+                        <li>B.Sc. Nursing</li>
+                        <li>Post Basic B.Sc. Nursing</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Postgraduate Programs -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingPostgraduate">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePostgraduate" aria-expanded="false" aria-controls="collapsePostgraduate">
+                    + Postgraduate Programs
+                </button>
+            </h2>
+            <div id="collapsePostgraduate" class="accordion-collapse collapse" aria-labelledby="headingPostgraduate" data-bs-parent="#programsAccordion">
+                <div class="accordion-body">
+                    <ul>
+                        <li>M.Sc. Nursing – Medical-Surgical</li>
+                        <li>M.Sc. Nursing – Pediatric</li>
+                        <li>M.Sc. Nursing – Psychiatric</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 🔸 Main Info Section -->
+<div class="container mt-5">
+    <div class="row g-4">
+        <!-- 📌 Left Info Panel -->
+        <div class="col-md-6">
+            <div class="admission-box">
+                <h4 class="section-title">Academic Session: 2022-23</h4>
+                <ul>
+                    <li>Seats: 30 (Each Program)</li>
+                    <li>Duration: 6 Months</li>
+                </ul>
+
+                <h4 class="section-title mt-3">Eligibility</h4>
+                <ul>
+                    <li>Registered General Nursing Midwifery (GNM)</li>
+                    <li>Registered B.Sc Nursing with any State Nursing Council</li>
+                </ul>
+
+                <h4 class="section-title mt-3">Fee Structure</h4>
+                <ul>
+                    <li>Course Fee: ₹30,000</li>
+                    <li>Admission Fee: ₹5,000</li>
+                    <li>Apply Before: 30-Nov-2022</li>
+                    <li>Admission Process: 10-Dec-2022</li>
+                    <li>Commencement: 12-Dec-2022</li>
+                </ul>
+
+                <h4 class="section-title mt-3">Hostel & Mess</h4>
+                <ul>
+                    <li>Hostel: ₹10,000 / 6 Months</li>
+                    <li>Mess: ₹22,500 / 6 Months</li>
+                </ul>
+
+                <h4 class="section-title mt-3">Payment</h4>
+                <p>Mode: Bank Draft / NEFT / RTGS / Internet Banking</p>
+
+                <div class="text-center mt-4">
+                    <a href="/admission-form" class="btn btn-danger btn-lg">Apply Now</a>
+                </div>
+            </div>
+        </div>
+        
+
+        <!-- 📘 Right Info Panel -->
+        <div class="col-md-6">
+            <div class="admission-box">
+                <h4 class="section-title">Available Programs</h4>
+                <ul>
+                    <li><strong>Diploma:</strong> Dialysis, Critical Care</li>
+                    <li><strong>Graduate:</strong> B.Sc. Nursing</li>
+                    <li><strong>Postgraduate:</strong> M.Sc. Nursing (coming soon)</li>
+                </ul>
+
+                <h4 class="section-title mt-4">Contact Details</h4>
+                <p>
+                    <strong>Phone:</strong> 0674-7105335 / 2725053<br>
+                    <strong>Mobile:</strong> 93489 24618<br>
+                    <strong>Email:</strong> principal.con@kins.ac.in<br>
+                    <strong>Website:</strong> <a href="https://kins.ac.in" target="_blank">kins.ac.in</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<!-- 💳 Payment Bank Link Section -->
+<div class="container mt-5 mb-5">
+    <div class="admission-box">
+        <h4 class="section-title">Payment Information</h4>
+        <p>
+            You can make your payment via:
+        </p>
+        <ul>
+            <li><strong>Bank Name:</strong> Punjab National Bank</li>
+            <li><strong>Account Holder Name:</strong> Jyoti Nursing College</li>
+            <li><strong>Account Number:</strong> 12345678901234</li>
+            <li><strong>IFSC Code:</strong> PUNB0123456</li>
+            <li><strong>UPI ID (for Google Pay / PhonePe / Paytm):</strong> <code>jyoticollege@pnb</code></li>
+        </ul>
+        <p class="fw-bold text-danger">Note: Mention your full name and course while making the payment for reference.</p>
+        <a href="https://paytm.com/education" target="_blank" class="btn btn-primary mt-2">
+            Pay Online via Bank Portal
+        </a>
+    </div>
+</div>
+</body>
+</html>
