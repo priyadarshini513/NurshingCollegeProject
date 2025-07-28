@@ -6,6 +6,11 @@
     <title>Thesis – KINS</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
+    body {
+	margin: 0;
+	padding: 0;
+
+}
     /* 🔸 Navbar Link Hover Highlight */
 .navbar-nav .nav-link {
     transition: all 0.3s ease;
@@ -40,6 +45,11 @@
             background-color: #ff9900;
             color: white;
         }
+        /* Enable hover dropdown for navbar */
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+}
     </style>
 </head>
 
@@ -56,21 +66,21 @@
         </a>
     </div>
 
-    <!-- 🌐 Center: Social Icons -->
-    <div class="d-flex gap-3 mb-2 mb-md-0">
-        <a href="https://facebook.com" class="text-white" target="_blank" title="Facebook">
-            <i class="bi bi-facebook fs-5"></i>
-        </a>
-        <a href="https://twitter.com" class="text-white" target="_blank" title="Twitter">
-            <i class="bi bi-twitter fs-5"></i>
-        </a>
-        <a href="https://youtube.com" class="text-white" target="_blank" title="YouTube">
-            <i class="bi bi-youtube fs-5"></i>
-        </a>
-        <a href="https://instagram.com" class="text-white" target="_blank" title="Instagram">
-            <i class="bi bi-instagram fs-5"></i>
-        </a>
-    </div>
+    <!-- Social Icons -->
+<div class="d-flex gap-3 mb-2 mb-md-0">
+    <a href="https://www.facebook.com/KIITUniversityOfficial" class="text-white" target="_blank" title="Facebook">
+        <i class="bi bi-facebook fs-5"></i>
+    </a>
+    <a href="https://twitter.com/kiituniversity" class="text-white" target="_blank" title="Twitter">
+        <i class="bi bi-twitter fs-5"></i>
+    </a>
+    <a href="https://www.youtube.com/@KIITUniversityOfficial" class="text-white" target="_blank" title="YouTube">
+        <i class="bi bi-youtube fs-5"></i>
+    </a>
+    <a href="https://www.instagram.com/kiituniversity" class="text-white" target="_blank" title="Instagram">
+        <i class="bi bi-instagram fs-5"></i>
+    </a>
+</div>
 
     <!-- 👤 Right: Founder Info -->
     <div class="d-flex align-items-center">
@@ -97,9 +107,8 @@
 
 
 <!-- Top Navigation -->
-<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #f57c00; width: 100%;">
-
-    <div class="container-fluid">
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background-color: #f57c00; z-index: 1030;">
+ <div class="container-fluid">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -145,9 +154,15 @@
 </li>
    
    
-    <li class="nav-item flex-fill">
-        <a class="nav-link text-white" th:href="@{/gallery}">PEOPLE</a>
-    </li>
+   <li class="nav-item dropdown flex-fill hover-dropdown"><a
+						class="nav-link dropdown-toggle fw-bold text-white" href="#"
+						id="peopleDropdown" role="button"> PEOPLE </a>
+						<ul class="dropdown-menu" aria-labelledby="peopleDropdown">
+							<li><a class="dropdown-item" th:href="@{/administration}">Administration</a></li>
+							<li><a class="dropdown-item" th:href="@{/faculty}">Faculty</a></li>
+							<li><a class="dropdown-item" th:href="@{/board-of-studies}">Board
+									Of Studies</a></li>
+						</ul></li>
     <li class="nav-item flex-fill">
         <a class="nav-link text-white" th:href="@{/contact}">CONTACT US</a>
     </li>
@@ -241,6 +256,61 @@
             </table>
         </div>
     </div>
+    <!-- ⚫ Full-width Black Horizontal Line -->
+<hr style="border: none; height: 3px; background-color: black; margin: 0;">
+<!-- Footer Section -->
+<footer class="bg-light text-dark pt-5 pb-3 mt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 mb-4">
+                <h6 class="fw-bold">Admissions</h6>
+                <ul class="list-unstyled">
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">MOU’s and Collaborations</a></li>
+                    <li><a href="#">Centres of Excellence</a></li>
+                    <li><a href="#">Library</a></li>
+                    <li><a href="#">Contact us</a></li>
+                    <li><a href="#">Testimonials</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 mb-4">
+                <h6 class="fw-bold">Resources</h6>
+                <ul class="list-unstyled">
+                    <li><a href="#">SAP Portal</a></li>
+                    <li><a href="#">Grievance Cell</a></li>
+                    <li><a href="#">KIIT Review</a></li>
+                    <li><a href="#">Student Activity Centre</a></li>
+                    <li><a href="#">Anti-Ragging</a></li>
+                    <li><a href="#">Download Logo</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 mb-4">
+                <h6 class="fw-bold">Other Links</h6>
+                <ul class="list-unstyled">
+                    <li><a href="#">Founder</a></li>
+                    <li><a href="#">Jyoti Foundation</a></li>
+                    <li><a href="#">Art of Giving</a></li>
+                    <li><a href="#">KIMS Hospital</a></li>
+                    <li><a href="#">Technology Business Incubator</a></li>
+                    <li><a href="#">JYOTI-ITI</a></li>
+                    <li><a href="#">JYOTI Polytechnic</a></li>
+                    <li><a href="#">JYOTI International School</a></li>
+                    <li><a href="#">Kalarabanka Smart Village</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 mb-4">
+                <h6 class="fw-bold">ADDRESS FOR COMMUNICATION</h6>
+                <p class="mb-1"><i class="bi bi-geo-alt-fill"></i> Jyoti Institute of Nursing Sciences,<br>(JINS), Campus-1, Patia, Bhubaneswar 751024</p>
+                <p class="mb-1"><i class="bi bi-telephone-fill"></i> 0674-2725053</p>
+                <p class="mb-1"><i class="bi bi-envelope-fill"></i> info@jyoti.ac.in</p>
+                <p><i class="bi bi-clock-fill"></i> Monday - Friday: 8:00 AM - 10:00 PM</p>
+            </div>
+        </div>
+        <div class="text-center pt-3 border-top mt-3">
+            <p class="mb-0">&copy; Copyright 2025 - All Rights Reserved</p>
+        </div>
+    </div>
+</footer>
 </body>
 
 </html>

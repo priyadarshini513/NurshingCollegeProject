@@ -7,8 +7,19 @@
     
     <!-- Bootstrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     
     <style>
+        body {
+	margin: 0;
+	padding: 0;
+
+}
+.nav-link.border-bottom {
+    border-bottom: 3px solid #000000 !important;
+}
+
+
     /* 🔸 Navbar Link Hover Highlight */
 .navbar-nav .nav-link {
     transition: all 0.3s ease;
@@ -23,25 +34,29 @@
     text-decoration: none;
 }
         .admissions-hero {
-            background: url('/images/nurse.jpg') no-repeat center center;
-            background-size: cover;
-            color: white;
-            padding: 60px 20px;
-            text-align: center;
-            position: relative;
-        }
-        .admissions-hero::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-        }
-        .admissions-hero .content {
-            position: relative;
-            z-index: 2;
-        }
+  background: url('/images/nurse.jpg') no-repeat center center;
+  background-size: cover;
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+  position: relative;
+  margin-top: 0; /* ✅ Ensure no spacing at top */
+}
+
+.admissions-hero::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.admissions-hero .content {
+  position: relative;
+  z-index: 2;
+}
+
         
        .section-title {
     font-weight: bold;
@@ -85,36 +100,40 @@ footer a:hover {
     text-decoration: none !important;
     color: #0d6efd; /* Optional: blue on hover */
 }
+/* Enable hover dropdown for navbar */
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+}
     </style>
 </head>
 <body>
 <!-- ✅ Top Header Section with Logo and Founder Info -->
 <div style="background: linear-gradient(to right, #1e3c72, #2a5298); color: white; padding: 10px 20px;"
      class="d-flex justify-content-between align-items-center flex-wrap">
-
     <!-- 🔗 Left: Go to Jyoti Home Page -->
-    <div class="d-flex align-items-center gap-2 mb-2 mb-md-0">
-        <i class="bi bi-arrow-left-circle-fill fs-5 text-white"></i>
-        <a href="https://kiit.ac.in" target="_blank" class="text-white text-decoration-none fw-bold">
-            GO TO JYOTI HOME PAGE
-        </a>
-    </div>
-
-    <!-- 🌐 Center: Social Icons -->
-    <div class="d-flex gap-3 mb-2 mb-md-0">
-        <a href="https://facebook.com" class="text-white" target="_blank" title="Facebook">
-            <i class="bi bi-facebook fs-5"></i>
-        </a>
-        <a href="https://twitter.com" class="text-white" target="_blank" title="Twitter">
-            <i class="bi bi-twitter fs-5"></i>
-        </a>
-        <a href="https://youtube.com" class="text-white" target="_blank" title="YouTube">
-            <i class="bi bi-youtube fs-5"></i>
-        </a>
-        <a href="https://instagram.com" class="text-white" target="_blank" title="Instagram">
-            <i class="bi bi-instagram fs-5"></i>
-        </a>
-    </div>
+<!-- 🔗 Left: Go to Jyoti Home Page -->
+<div class="d-flex align-items-center gap-2 mb-2 mb-md-0">
+    <a href="/" class="text-white text-decoration-none fw-bold d-flex align-items-center">
+        <i class="bi bi-arrow-left-circle-fill fs-5 me-2"></i>
+        GO TO JYOTI HOME PAGE
+    </a>
+</div>
+    <!-- Social Icons -->
+<div class="d-flex gap-3 mb-2 mb-md-0">
+    <a href="https://www.facebook.com/KIITUniversityOfficial" class="text-white" target="_blank" title="Facebook">
+        <i class="bi bi-facebook fs-5"></i>
+    </a>
+    <a href="https://twitter.com/kiituniversity" class="text-white" target="_blank" title="Twitter">
+        <i class="bi bi-twitter fs-5"></i>
+    </a>
+    <a href="https://www.youtube.com/@KIITUniversityOfficial" class="text-white" target="_blank" title="YouTube">
+        <i class="bi bi-youtube fs-5"></i>
+    </a>
+    <a href="https://www.instagram.com/kiituniversity" class="text-white" target="_blank" title="Instagram">
+        <i class="bi bi-instagram fs-5"></i>
+    </a>
+</div>
 
     <!-- 👤 Right: Founder Info -->
     <div class="d-flex align-items-center">
@@ -129,9 +148,8 @@ footer a:hover {
 </div>
 <!-- 🔷 Common Navigation Bar -->
 <!-- Top Navigation -->
-<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #f57c00; width: 100%;">
-
-    <div class="container-fluid">
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background-color: #f57c00; z-index: 1030;">
+ <div class="container-fluid">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -148,17 +166,21 @@ footer a:hover {
         <a class="nav-link text-white" th:href="@{/courses}">ACADEMICS</a>
     </li>
     <li class="nav-item dropdown flex-fill">
-        <a class="nav-link text-white dropdown-toggle" href="#" id="admissionDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            ADMISSIONS
-        </a>
-        <ul class="dropdown-menu" aria-labelledby="admissionDropdown">
-            <li>
-                <a class="dropdown-item text-danger fw-bold" th:href="@{/admission}">
-                    <i class="bi bi-box-arrow-in-right me-1"></i> APPLY
-                </a>
-            </li>
-        </ul>
-    </li>
+    <a class="nav-link dropdown-toggle"
+       th:class="'nav-link dropdown-toggle ' + (${activePage} == 'admission' ? 'text-dark fw-bold border-bottom border-dark bg-white rounded-top' : 'text-white')"
+       href="#" id="admissionDropdown" role="button"
+       data-bs-toggle="dropdown" aria-expanded="false">
+        ADMISSIONS
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="admissionDropdown">
+        <li>
+            <a class="dropdown-item text-danger fw-bold" th:href="@{/admission}">
+                <i class="bi bi-box-arrow-in-right me-1"></i> APPLY
+            </a>
+        </li>
+    </ul>
+</li>
+    
      <li class="nav-item flex-fill">
         <a class="nav-link text-white" th:href="@{/gallery}">LABORATORY</a>
     </li>
@@ -184,10 +206,15 @@ footer a:hover {
         <li><a class="dropdown-item" href="/thesis">Thesis</a></li>
     </ul>
 </li>
-    
-    <li class="nav-item flex-fill">
-        <a class="nav-link text-white" th:href="@{/people}">PEOPLE</a>
-    </li>
+    <li class="nav-item dropdown flex-fill hover-dropdown"><a
+						class="nav-link dropdown-toggle fw-bold text-white" href="#"
+						id="peopleDropdown" role="button"> PEOPLE </a>
+						<ul class="dropdown-menu" aria-labelledby="peopleDropdown">
+							<li><a class="dropdown-item" th:href="@{/administration}">Administration</a></li>
+							<li><a class="dropdown-item" th:href="@{/faculty}">Faculty</a></li>
+							<li><a class="dropdown-item" th:href="@{/board-of-studies}">Board
+									Of Studies</a></li>
+						</ul></li>
     <li class="nav-item">
     <a class="nav-link text-white" th:href="@{/contact}">CONTACT US</a>
 </li>
@@ -196,14 +223,31 @@ footer a:hover {
  </div>
 </nav>
 <!-- 🔷 Hero Section with Background -->
-<section class="admissions-hero">
+<section class="admissions-hero" style="margin-top: 0;">
     <div class="content">
         <h1 class="display-5 fw-bold">Certificate Courses</h1>
         <p class="lead">Dialysis Nursing | Emergencies in Neuroscience Nursing | Perioperative Nursing | Critical Care Nursing</p>
         <p>Contact: 0674-7105335 / 2725053 | Mobile: 93487 84724<br>Email: jyotikumar@gmail.com</p>
     </div>
 </section>
-
+<!-- 🔷 Multicolor Quick Links Section -->
+<section style="display: flex; width: 100%;">
+  <a href="/about" style="flex: 1; background-color: #009999; color: white; text-align: center; padding: 30px 0; font-size: 24px; font-weight: bold; text-decoration: none;">
+    Know School &nbsp; &rsaquo;
+  </a>
+  <a href="/gallery" style="flex: 1; background-color: #008080; color: white; text-align: center; padding: 30px 0; font-size: 24px; font-weight: bold; text-decoration: none;">
+    Laboratory &nbsp; &rsaquo;
+  </a>
+  <a href="/research" style="flex: 1; background-color: #006666; color: white; text-align: center; padding: 30px 0; font-size: 24px; font-weight: bold; text-decoration: none;">
+    Research &nbsp; &rsaquo;
+  </a>
+  <a href="/facility" style="flex: 1; background-color: #007777; color: white; text-align: center; padding: 30px 0; font-size: 24px; font-weight: bold; text-decoration: none;">
+    Library &nbsp; &rsaquo;
+  </a>
+  <a href="/" style="flex: 1; background-color: #006060; color: white; text-align: center; padding: 30px 0; font-size: 24px; font-weight: bold; text-decoration: none;">
+    Departments &nbsp; &rsaquo;
+  </a>
+</section>
 <!-- 🔽 Available Programs Section -->
 <div class="container my-5">
     <h2 class="section-title mb-4">Available Programs</h2>
@@ -345,7 +389,8 @@ footer a:hover {
 
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
+<!-- ⚫ Full-width Black Horizontal Line -->
+<hr style="border: none; height: 3px; background-color: black; margin: 0;">
 <!-- 🔻 Footer Section -->
 <footer class="bg-light text-dark pt-5 pb-3">
     <div class="container">

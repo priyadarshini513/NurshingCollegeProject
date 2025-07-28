@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Board Of Studies – Jyoti Nursing College</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f9f9f9;
+    }
+    .header-banner {
+      background-color: #2c2f39;
+      padding: 60px 0;
+      text-align: center;
+      color: white;
+    }
+    .header-banner h1 {
+      font-size: 42px;
+      font-weight: bold;
+    }
+    .breadcrumb-text {
+      font-size: 16px;
+      color: #ccc;
+    }
+    .table thead {
+      background-color: #f57c00;
+      color: white;
+    }
+    .table-striped > tbody > tr:nth-of-type(odd) {
+      background-color: #fdf4eb;
+    }
+  </style>
+</head>
+<body>
+<!-- ✅ FIXED: Full Top Banner -->
+<div style="background: linear-gradient(to right, #1e3c72, #2a5298); color: white; padding: 10px 20px;"
+     class="d-flex justify-content-between align-items-center flex-wrap">
+
+    <!-- 🔗 Home Arrow and Link -->
+    <div class="d-flex align-items-center gap-2 mb-2 mb-md-0">
+        <a href="/" class="text-white text-decoration-none fw-bold d-flex align-items-center">
+            <i class="bi bi-arrow-left-circle-fill fs-5 me-2"></i>
+            GO TO JYOTI HOME PAGE
+        </a>
+    </div>
+
+<!-- Social Icons -->
+<div class="d-flex gap-3 mb-2 mb-md-0">
+    <a href="https://www.facebook.com/KIITUniversityOfficial" class="text-white" target="_blank" title="Facebook">
+        <i class="bi bi-facebook fs-5"></i>
+    </a>
+    <a href="https://twitter.com/kiituniversity" class="text-white" target="_blank" title="Twitter">
+        <i class="bi bi-twitter fs-5"></i>
+    </a>
+    <a href="https://www.youtube.com/@KIITUniversityOfficial" class="text-white" target="_blank" title="YouTube">
+        <i class="bi bi-youtube fs-5"></i>
+    </a>
+    <a href="https://www.instagram.com/kiituniversity" class="text-white" target="_blank" title="Instagram">
+        <i class="bi bi-instagram fs-5"></i>
+    </a>
+</div>
+
+    <!-- 👤 Founder Info -->
+    <div class="d-flex align-items-center mb-2 mb-md-0">
+        <img src="/images/jyotikumar.jpg" alt="Founder"
+             style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;" class="me-2">
+        <div>
+            <strong>Prof. Jyotikumar</strong><br>
+            <small>Founder – JNC</small><br>
+            <a href="https://jyotikumar.com" class="text-white text-decoration-none" target="_blank">jyotikumar.com</a>
+        </div>
+    </div>
+
+</div>
+
+
+
+<!-- 🔷 Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background-color: #f57c00; z-index: 1030;">
+
+    <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navmenu">
+            <ul class="navbar-nav w-100 d-flex justify-content-between text-center">
+                <li class="nav-item flex-fill"><a class="nav-link active fw-bold text-white" th:href="@{/}">HOME</a></li>
+                <li class="nav-item flex-fill"><a class="nav-link text-white" th:href="@{/about}">ABOUT</a></li>
+                <li class="nav-item flex-fill"><a class="nav-link text-white" th:href="@{/courses}">ACADEMICS</a></li>
+                <li class="nav-item dropdown flex-fill">
+                    <a class="nav-link dropdown-toggle text-white" href="#" id="admissionDropdown" role="button" data-bs-toggle="dropdown">ADMISSIONS</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item text-danger fw-bold" th:href="@{/admission}"><i class="bi bi-box-arrow-in-right me-1"></i> APPLY</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item flex-fill"><a class="nav-link text-white" th:href="@{/gallery}">LABORATORY</a></li>
+                <li class="nav-item flex-fill"><a class="nav-link text-white" th:href="@{/events}">EVENTS</a></li>
+                <li class="nav-item dropdown flex-fill position-relative">
+                    <a class="nav-link fw-bold text-white" href="/research" id="researchDropdown">RESEARCH</a>
+                    <a class="nav-link dropdown-toggle text-white position-absolute" style="right: 0; top: 0; height: 100%; width: 30px;" href="#" role="button" data-bs-toggle="dropdown"></a>
+                    <ul class="dropdown-menu" aria-labelledby="researchDropdown">
+                        <li><a class="dropdown-item" href="/publications">Publications</a></li>
+                        <li><a class="dropdown-item" href="/research-list">Research List</a></li>
+                        <li><a class="dropdown-item" href="/thesis">Thesis</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown flex-fill position-relative">
+                    <a class="nav-link dropdown-toggle fw-bold text-white" href="#" id="peopleDropdown" role="button" data-bs-toggle="dropdown">PEOPLE</a>
+                    <ul class="dropdown-menu" aria-labelledby="peopleDropdown">
+                        <li><a class="dropdown-item" href="/administration">Administration</a></li>
+                        <li><a class="dropdown-item" href="/faculty">Faculty</a></li>
+                        <li><a class="dropdown-item" href="/board-of-studies">Board Of Studies</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item flex-fill"><a class="nav-link text-white" th:href="@{/contact}">CONTACT US</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- 🔷 Page Header -->
+<div class="header-banner">
+  <h1>Board Of Studies</h1>
+  <div class="breadcrumb-text mt-2">
+    Home / Board Of Studies
+  </div>
+</div>
+
+<!-- 🔶 Table Section -->
+<div class="container my-5">
+  <div class="table-responsive">
+    <table class="table table-bordered table-striped align-middle text-center">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Name</th>
+          <th>Designation</th>
+          <th>Role</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Dr. Niyati Das</td>
+          <td>Professor cum Principal, Jyoti Institute of Nursing Sciences</td>
+          <td>Chairperson</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Prof. (Dr.) Uma Adhikari</td>
+          <td>Principal, College of Nursing, NRS MC & H, Kolkata</td>
+          <td>External Member</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Dr. Shashidhara YN</td>
+          <td>Professor & HOD, Dept. of Community Health Nursing, Manipal College of Nursing</td>
+          <td>External Member</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Dr. Kruti Deepa Mohanty</td>
+          <td>Principal, I/C, College of Nursing, Burla</td>
+          <td>External Member</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Dr. Anjana Raut</td>
+          <td>Professor, Jyoti Institute of Dental Sciences</td>
+          <td>Internal Member from other school</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>Mr. Asokan R</td>
+          <td>Professor, Jyoti Institute of Nursing Sciences</td>
+          <td>Internal Member</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>Dr. Anusuya Pattnaik</td>
+          <td>Professor, Jyoti Institute of Nursing Sciences</td>
+          <td>Internal Member</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>Dr. V. Sivasankari</td>
+          <td>Associate Professor, Jyoti Institute of Nursing Sciences</td>
+          <td>Internal Member</td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>Dr. ipsita swain</td>
+          <td>Associate Professor, Jyoti Institute of Nursing Sciences</td>
+          <td>Internal Member</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>snigdha mohapatra</td>
+          <td>Associate Professor, Jyoti Institute of Nursing Sciences</td>
+          <td>Internal Member</td>
+        </tr>
+        
+      </tbody>
+    </table>
+  </div>
+</div>
+<!-- ⚫ Full-width Black Horizontal Line -->
+<hr style="border: none; height: 3px; background-color: black; margin: 0;">
+
+<!-- Footer Section -->
+<footer class="bg-light text-dark pt-5 pb-3 mt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 mb-4">
+                <h6 class="fw-bold">Admissions</h6>
+                <ul class="list-unstyled">
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">MOU’s and Collaborations</a></li>
+                    <li><a href="#">Centres of Excellence</a></li>
+                    <li><a href="#">Library</a></li>
+                    <li><a href="#">Contact us</a></li>
+                    <li><a href="#">Testimonials</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 mb-4">
+                <h6 class="fw-bold">Resources</h6>
+                <ul class="list-unstyled">
+                    <li><a href="#">SAP Portal</a></li>
+                    <li><a href="#">Grievance Cell</a></li>
+                    <li><a href="#">KIIT Review</a></li>
+                    <li><a href="#">Student Activity Centre</a></li>
+                    <li><a href="#">Anti-Ragging</a></li>
+                    <li><a href="#">Download Logo</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 mb-4">
+                <h6 class="fw-bold">Other Links</h6>
+                <ul class="list-unstyled">
+                    <li><a href="#">Founder</a></li>
+                    <li><a href="#">Jyoti Foundation</a></li>
+                    <li><a href="#">Art of Giving</a></li>
+                    <li><a href="#">KIMS Hospital</a></li>
+                    <li><a href="#">Technology Business Incubator</a></li>
+                    <li><a href="#">JYOTI-ITI</a></li>
+                    <li><a href="#">JYOTI Polytechnic</a></li>
+                    <li><a href="#">JYOTI International School</a></li>
+                    <li><a href="#">Kalarabanka Smart Village</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 mb-4">
+                <h6 class="fw-bold">ADDRESS FOR COMMUNICATION</h6>
+                <p class="mb-1"><i class="bi bi-geo-alt-fill"></i> Jyoti Institute of Nursing Sciences,<br>(JINS), Campus-1, Patia, Bhubaneswar 751024</p>
+                <p class="mb-1"><i class="bi bi-telephone-fill"></i> 0674-2725053</p>
+                <p class="mb-1"><i class="bi bi-envelope-fill"></i> info@jyoti.ac.in</p>
+                <p><i class="bi bi-clock-fill"></i> Monday - Friday: 8:00 AM - 10:00 PM</p>
+            </div>
+        </div>
+        <div class="text-center pt-3 border-top mt-3">
+            <p class="mb-0">&copy; Copyright 2025 - All Rights Reserved</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

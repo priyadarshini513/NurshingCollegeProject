@@ -3,7 +3,18 @@
 <head>
     <title>Academics - Jyoti Nursing College</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"/>
+<style>
+body {
+	margin: 0;
+	padding: 0;
 
+}
+/* Enable hover dropdown for navbar */
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+}
+</style>
 </head>
 <body>
 <!-- ✅ Top Header Section with Logo and Founder Info -->
@@ -17,22 +28,21 @@
             GO TO JYOTI HOME PAGE
         </a>
     </div>
-
-    <!-- 🌐 Center: Social Icons -->
-    <div class="d-flex gap-3 mb-2 mb-md-0">
-        <a href="https://facebook.com" class="text-white" target="_blank" title="Facebook">
-            <i class="bi bi-facebook fs-5"></i>
-        </a>
-        <a href="https://twitter.com" class="text-white" target="_blank" title="Twitter">
-            <i class="bi bi-twitter fs-5"></i>
-        </a>
-        <a href="https://youtube.com" class="text-white" target="_blank" title="YouTube">
-            <i class="bi bi-youtube fs-5"></i>
-        </a>
-        <a href="https://instagram.com" class="text-white" target="_blank" title="Instagram">
-            <i class="bi bi-instagram fs-5"></i>
-        </a>
-    </div>
+    <!-- Social Icons -->
+<div class="d-flex gap-3 mb-2 mb-md-0">
+    <a href="https://www.facebook.com/KIITUniversityOfficial" class="text-white" target="_blank" title="Facebook">
+        <i class="bi bi-facebook fs-5"></i>
+    </a>
+    <a href="https://twitter.com/kiituniversity" class="text-white" target="_blank" title="Twitter">
+        <i class="bi bi-twitter fs-5"></i>
+    </a>
+    <a href="https://www.youtube.com/@KIITUniversityOfficial" class="text-white" target="_blank" title="YouTube">
+        <i class="bi bi-youtube fs-5"></i>
+    </a>
+    <a href="https://www.instagram.com/kiituniversity" class="text-white" target="_blank" title="Instagram">
+        <i class="bi bi-instagram fs-5"></i>
+    </a>
+</div>
 
     <!-- 👤 Right: Founder Info -->
     <div class="d-flex align-items-center">
@@ -47,7 +57,7 @@
 </div>
 
 <!-- ✅ Navbar (reuse from about.html or admission.html) -->
-<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #f57c00;">
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background-color: #f57c00; z-index: 1030;">
     <div class="container">
         <a class="navbar-brand fw-bold text-white" href="/">Jyoti Nursing College</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -80,12 +90,35 @@
     <li class="nav-item flex-fill">
         <a class="nav-link text-white" th:href="@{/news}">EVENTS</a>
     </li>
-    <li class="nav-item flex-fill">
-        <a class="nav-link text-white" th:href="@{/gallery}">RESEARCH</a>
-    </li>
-    <li class="nav-item flex-fill">
-        <a class="nav-link text-white" th:href="@{/gallery}">PEOPLE</a>
-    </li>
+    <li class="nav-item dropdown flex-fill position-relative">
+    <!-- 🔹 RESEARCH Link — clickable -->
+    <a class="nav-link fw-bold text-white" href="/research" id="researchDropdown">
+        RESEARCH
+    </a>
+
+    <!-- 🔹 Dropdown Toggler Icon (Caret only) -->
+    <a class="nav-link dropdown-toggle text-white position-absolute" 
+       style="right: 0; top: 0; height: 100%; width: 30px;" 
+       href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    </a>
+
+    <!-- 🔻 Dropdown Menu -->
+    <ul class="dropdown-menu" aria-labelledby="researchDropdown">
+        <li><a class="dropdown-item" href="/publications">Publications</a></li>
+        <li><a class="dropdown-item" href="/research-list">Research List</a></li>
+        <li><a class="dropdown-item" href="/thesis">Thesis</a></li>
+    </ul>
+</li>
+    
+    <li class="nav-item dropdown flex-fill hover-dropdown"><a
+						class="nav-link dropdown-toggle fw-bold text-white" href="#"
+						id="peopleDropdown" role="button"> PEOPLE </a>
+						<ul class="dropdown-menu" aria-labelledby="peopleDropdown">
+							<li><a class="dropdown-item" th:href="@{/administration}">Administration</a></li>
+							<li><a class="dropdown-item" th:href="@{/faculty}">Faculty</a></li>
+							<li><a class="dropdown-item" th:href="@{/board-of-studies}">Board
+									Of Studies</a></li>
+						</ul></li>
     <li class="nav-item flex-fill">
         <a class="nav-link text-white" th:href="@{/contact}">CONTACT US</a>
     </li>
@@ -93,17 +126,19 @@
     </div>
 </nav>
 <!-- 🔶 Banner Section Below Navbar -->
-<section style="margin-top: 70px;">
+<section>
     <div class="position-relative text-white">
         <img src="/images/courses-banner.jpg" alt="Courses" class="img-fluid w-100"
              style="height: 500px; object-fit: cover; opacity: 0.75;">
-        
+
+        <!-- Overlay Text -->
         <div class="position-absolute top-50 start-50 translate-middle text-center">
             <h1 class="display-4 fw-bold">Courses</h1>
             <p class="fs-5">Home / Courses</p>
         </div>
     </div>
 </section>
+
 
 <!-- 🔷 Main Content Section -->
 <div class="container mt-5">
@@ -118,6 +153,74 @@
     <h4 class="mt-4 fw-bold text-success">Curriculum & Syllabus</h4>
     <p>Our academic programs are designed as per INC & UGC guidelines. Each course is structured to ensure hands-on learning, clinical practice, and academic excellence.</p>
 </div>
+<!-- ⚫ Full-width Black Horizontal Line -->
+<hr style="border: none; height: 3px; background-color: black; margin: 0;">
+<!-- 🔻 Footer Section -->
+<footer class="bg-light text-dark pt-5 pb-3">
+    <div class="container">
+        <div class="row">
+            <!-- Column 1: Admissions -->
+            <div class="col-md-3 mb-4">
+                <h6 class="fw-bold">Admissions</h6>
+                <ul class="list-unstyled">
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">MOU’s and Collaborations</a></li>
+                    <li><a href="#">Centres of Excellence</a></li>
+                    <li><a href="#">Library</a></li>
+                    <li><a href="#">Contact us</a></li>
+                    <li><a href="#">Testimonials</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 2: Resources -->
+            <div class="col-md-3 mb-4">
+                <h6 class="fw-bold">Resources</h6>
+                <ul class="list-unstyled">
+                    <li><a href="#">SAP Portal</a></li>
+                    <li><a href="#">Grievance Cell</a></li>
+                    <li><a href="#">KIIT Review</a></li>
+                    <li><a href="#">Student Activity Centre</a></li>
+                    <li><a href="#">Anti-Ragging</a></li>
+                    <li><a href="#">Download Logo</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Other Links -->
+            <div class="col-md-3 mb-4">
+                <h6 class="fw-bold">Other Links</h6>
+                <ul class="list-unstyled">
+                    <li><a href="#">Founder</a></li>
+                    <li><a href="#">Jyoti Foundation</a></li>
+                    <li><a href="#">Art of Giving</a></li>
+                    <li><a href="#">KIMS Hospital</a></li>
+                    <li><a href="#">Technology Business Incubator</a></li>
+                    <li><a href="#">JYOTI-ITI</a></li>
+                    <li><a href="#">JYOTI Polytechnic</a></li>
+                    <li><a href="#">JYOTI International School</a></li>
+                    <li><a href="#">Kalarabanka Smart Village</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 4: Address -->
+            <div class="col-md-3 mb-4">
+                <h6 class="fw-bold">ADDRESS FOR COMMUNICATION</h6>
+                <p class="mb-1">
+                    <i class="bi bi-geo-alt-fill"></i> Jyoti Institute of Nursing Sciences,<br>
+                    (JINS), JINS Deemed to be University<br>
+                    Campus-1, Patia, Bhubaneswar 751024
+                </p>
+                <p class="mb-1"><i class="bi bi-telephone-fill"></i> 0674-2725053</p>
+                <p class="mb-1"><i class="bi bi-envelope-fill"></i> info@jyoti.ac.in</p>
+                <p><i class="bi bi-clock-fill"></i> Monday - Friday: 8:00 AM - 10:00 PM</p>
+            </div>
+        </div>
+
+        <!-- Footer bottom -->
+        <div class="text-center pt-3 border-top mt-3">
+            <p class="mb-0">&copy; Copyright 2025 - All Rights Reserved</p>
+        </div>
+    </div>
+</footer>
 
 </body>
 </html>

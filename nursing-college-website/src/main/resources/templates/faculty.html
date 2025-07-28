@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Faculty – Jyoti Nursing College</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f7f7f7;
+	margin: 0;
+	padding: 0;
+    }
+    .faculty-card {
+      background: #fff;
+      border: none;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      transition: all 0.3s ease-in-out;
+      height: 100%;
+    }
+    .faculty-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+    }
+    .faculty-img {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 2px solid #ddd;
+    }
+    .faculty-name {
+      font-weight: 600;
+      font-size: 18px;
+      margin-top: 10px;
+    }
+    .faculty-role {
+      font-size: 14px;
+      color: #888;
+    }
+    .faculty-icons i {
+      font-size: 16px;
+      margin-right: 10px;
+      color: #444;
+    }
+    .faculty-icons i:hover {
+      color: #0d6efd;
+    }
+    
+  </style>
+</head>
+<body>
+<!-- ✅ FIXED: Full Top Banner -->
+<div style="background: linear-gradient(to right, #1e3c72, #2a5298); color: white; padding: 10px 20px;"
+     class="d-flex justify-content-between align-items-center flex-wrap">
+
+    <!-- 🔗 Home Arrow and Link -->
+    <div class="d-flex align-items-center gap-2 mb-2 mb-md-0">
+        <a href="/" class="text-white text-decoration-none fw-bold d-flex align-items-center">
+            <i class="bi bi-arrow-left-circle-fill fs-5 me-2"></i>
+            GO TO JYOTI HOME PAGE
+        </a>
+    </div>
+
+    <!-- Social Icons -->
+<div class="d-flex gap-3 mb-2 mb-md-0">
+    <a href="https://www.facebook.com/KIITUniversityOfficial" class="text-white" target="_blank" title="Facebook">
+        <i class="bi bi-facebook fs-5"></i>
+    </a>
+    <a href="https://twitter.com/kiituniversity" class="text-white" target="_blank" title="Twitter">
+        <i class="bi bi-twitter fs-5"></i>
+    </a>
+    <a href="https://www.youtube.com/@KIITUniversityOfficial" class="text-white" target="_blank" title="YouTube">
+        <i class="bi bi-youtube fs-5"></i>
+    </a>
+    <a href="https://www.instagram.com/kiituniversity" class="text-white" target="_blank" title="Instagram">
+        <i class="bi bi-instagram fs-5"></i>
+    </a>
+</div>
+
+    <!-- 👤 Founder Info -->
+    <div class="d-flex align-items-center mb-2 mb-md-0">
+        <img src="/images/jyotikumar.jpg" alt="Founder"
+             style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;" class="me-2">
+        <div>
+            <strong>Prof. Jyotikumar</strong><br>
+            <small>Founder – JNC</small><br>
+            <a href="https://jyotikumar.com" class="text-white text-decoration-none" target="_blank">jyotikumar.com</a>
+        </div>
+    </div>
+
+</div>
+
+
+
+<!-- 🔷 Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background-color: #f57c00; z-index: 1030;">
+
+    <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navmenu">
+            <ul class="navbar-nav w-100 d-flex justify-content-between text-center">
+                <li class="nav-item flex-fill"><a class="nav-link active fw-bold text-white" th:href="@{/}">HOME</a></li>
+                <li class="nav-item flex-fill"><a class="nav-link text-white" th:href="@{/about}">ABOUT</a></li>
+                <li class="nav-item flex-fill"><a class="nav-link text-white" th:href="@{/courses}">ACADEMICS</a></li>
+                <li class="nav-item dropdown flex-fill">
+                    <a class="nav-link dropdown-toggle text-white" href="#" id="admissionDropdown" role="button" data-bs-toggle="dropdown">ADMISSIONS</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item text-danger fw-bold" th:href="@{/admission}"><i class="bi bi-box-arrow-in-right me-1"></i> APPLY</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item flex-fill"><a class="nav-link text-white" th:href="@{/gallery}">LABORATORY</a></li>
+                <li class="nav-item flex-fill"><a class="nav-link text-white" th:href="@{/events}">EVENTS</a></li>
+                <li class="nav-item dropdown flex-fill position-relative">
+                    <a class="nav-link fw-bold text-white" href="/research" id="researchDropdown">RESEARCH</a>
+                    <a class="nav-link dropdown-toggle text-white position-absolute" style="right: 0; top: 0; height: 100%; width: 30px;" href="#" role="button" data-bs-toggle="dropdown"></a>
+                    <ul class="dropdown-menu" aria-labelledby="researchDropdown">
+                        <li><a class="dropdown-item" href="/publications">Publications</a></li>
+                        <li><a class="dropdown-item" href="/research-list">Research List</a></li>
+                        <li><a class="dropdown-item" href="/thesis">Thesis</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown flex-fill position-relative">
+                    <a class="nav-link dropdown-toggle fw-bold text-white" href="#" id="peopleDropdown" role="button" data-bs-toggle="dropdown">PEOPLE</a>
+                    <ul class="dropdown-menu" aria-labelledby="peopleDropdown">
+                        <li><a class="dropdown-item" href="/administration">Administration</a></li>
+                        <li><a class="dropdown-item" href="/faculty">Faculty</a></li>
+                        <li><a class="dropdown-item" href="/board-of-studies">Board Of Studies</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item flex-fill"><a class="nav-link text-white" th:href="@{/contact}">CONTACT US</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- 🔶 Header Section -->
+<section class="py-5 bg-light">
+  <div class="container">
+
+    <!-- Faculty Row 1 -->
+    <div class="row align-items-center mb-5">
+      <div class="col-md-4 text-center">
+        <img src="/images/priyanka.jpg" alt="Priyanka Rout" class="img-fluid rounded-circle shadow" style="width: 220px; height: 220px; object-fit: cover;">
+      </div>
+      <div class="col-md-8">
+        <h4 class="fw-bold text-primary">Priyanka Rout</h4>
+        <p class="text-muted fst-italic">Assistant Professor</p>
+        <p>Dedicated to innovative teaching methods and student growth, Prof. Priyanka brings academic excellence and mentoring skills to the institution.</p>
+        <div class="mt-2">
+          <i class="bi bi-envelope me-3"></i>
+          <i class="bi bi-twitter me-3"></i>
+          <i class="bi bi-facebook"></i>
+        </div>
+      </div>
+    </div>
+
+    <!-- Faculty Row 2 -->
+    <div class="row align-items-center mb-5 flex-md-row-reverse">
+      <div class="col-md-4 text-center">
+        <img src="/images/mandal.jpg" alt="Mandal Jyoti" class="img-fluid rounded-circle shadow" style="width: 220px; height: 220px; object-fit: cover;">
+      </div>
+      <div class="col-md-8">
+        <h4 class="fw-bold text-primary">Mandal Jyoti</h4>
+        <p class="text-muted fst-italic">Professor & HOD</p>
+        <p>A visionary leader and expert in academic governance, Prof. Jyoti has mentored numerous students and faculty over her illustrious career.</p>
+        <div class="mt-2">
+          <i class="bi bi-envelope me-3"></i>
+          <i class="bi bi-linkedin me-3"></i>
+          <i class="bi bi-google"></i>
+        </div>
+      </div>
+    </div>
+
+    <!-- Faculty Row 3 -->
+    <div class="row align-items-center mb-5">
+      <div class="col-md-4 text-center">
+        <img src="/images/urmila.jpg" alt="Urmila Mandal" class="img-fluid rounded-circle shadow" style="width: 220px; height: 220px; object-fit: cover;">
+      </div>
+      <div class="col-md-8">
+        <h4 class="fw-bold text-primary">Urmila Mandal</h4>
+        <p class="text-muted fst-italic">Assistant Professor</p>
+        <p>Known for her student-first approach, Prof. Urmila specializes in advanced clinical practices and research-based teaching.</p>
+        <div class="mt-2">
+          <i class="bi bi-envelope me-3"></i>
+          <i class="bi bi-twitter me-3"></i>
+          <i class="bi bi-facebook"></i>
+        </div>
+      </div>
+    </div>
+
+    <!-- Faculty Row 4 -->
+    <div class="row align-items-center mb-5 flex-md-row-reverse">
+      <div class="col-md-4 text-center">
+        <img src="/images/palak.jpg" alt="Pratiksha Rout" class="img-fluid rounded-circle shadow" style="width: 220px; height: 220px; object-fit: cover;">
+      </div>
+      <div class="col-md-8">
+        <h4 class="fw-bold text-primary">Pratiksha Rout</h4>
+        <p class="text-muted fst-italic">Assistant Professor</p>
+        <p>With a background in nursing research and healthcare innovation, Pratiksha delivers excellent academic insights and leadership.</p>
+        <div class="mt-2">
+          <i class="bi bi-envelope me-3"></i>
+          <i class="bi bi-twitter me-3"></i>
+          <i class="bi bi-facebook"></i>
+        </div>
+      </div>
+    </div>
+
+    <!-- Faculty Row 5 -->
+    <div class="row align-items-center mb-5">
+      <div class="col-md-4 text-center">
+        <img src="/images/priya.jpg" alt="Sarmila Mandal" class="img-fluid rounded-circle shadow" style="width: 220px; height: 220px; object-fit: cover;">
+      </div>
+      <div class="col-md-8">
+        <h4 class="fw-bold text-primary">Sarmila Mandal</h4>
+        <p class="text-muted fst-italic">Assistant Professor</p>
+        <p>Prof. Sarmila is passionate about curriculum development and student engagement. She inspires learning through empathy and professionalism.</p>
+        <div class="mt-2">
+          <i class="bi bi-envelope me-3"></i>
+          <i class="bi bi-twitter me-3"></i>
+          <i class="bi bi-facebook"></i>
+        </div>
+      </div>
+    </div>
+
+    <!-- ✅ Faculty Row 6 (New Entry) -->
+    <div class="row align-items-center mb-5 flex-md-row-reverse">
+      <div class="col-md-4 text-center">
+        <img src="/images/raj.jpg" alt="Raj Sinha" class="img-fluid rounded-circle shadow" style="width: 220px; height: 220px; object-fit: cover;">
+      </div>
+      <div class="col-md-8">
+        <h4 class="fw-bold text-primary">Raj Sinha</h4>
+        <p class="text-muted fst-italic">Senior Lecturer</p>
+        <p>Raj Sinha contributes to the development of innovative clinical techniques and supports students with real-world insights into healthcare practices.</p>
+        <div class="mt-2">
+          <i class="bi bi-envelope me-3"></i>
+          <i class="bi bi-twitter me-3"></i>
+          <i class="bi bi-linkedin"></i>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+<!-- ⚫ Full-width Black Horizontal Line -->
+<hr style="border: none; height: 3px; background-color: black; margin: 0;">
+<footer class="bg-light text-dark pt-5 pb-3">
+    <div class="container">
+        <div class="row">
+            <!-- Column 1: Admissions -->
+            <div class="col-md-3 mb-4">
+                <h6 class="fw-bold">Admissions</h6>
+                <ul class="list-unstyled">
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">MOU’s and Collaborations</a></li>
+                    <li><a href="#">Centres of Excellence</a></li>
+                    <li><a href="#">Library</a></li>
+                    <li><a href="#">Contact us</a></li>
+                    <li><a href="#">Testimonials</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 2: Resources -->
+            <div class="col-md-3 mb-4">
+                <h6 class="fw-bold">Resources</h6>
+                <ul class="list-unstyled">
+                    <li><a href="#">SAP Portal</a></li>
+                    <li><a href="#">Grievance Cell</a></li>
+                    <li><a href="#">KIIT Review</a></li>
+                    <li><a href="#">Student Activity Centre</a></li>
+                    <li><a href="#">Anti-Ragging</a></li>
+                    <li><a href="#">Download Logo</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Other Links -->
+            <div class="col-md-3 mb-4">
+                <h6 class="fw-bold">Other Links</h6>
+                <ul class="list-unstyled">
+                    <li><a href="#">Founder</a></li>
+                    <li><a href="#">Jyoti Foundation</a></li>
+                    <li><a href="#">Art of Giving</a></li>
+                    <li><a href="#">KIMS Hospital</a></li>
+                    <li><a href="#">Technology Business Incubator</a></li>
+                    <li><a href="#">JYOTI-ITI</a></li>
+                    <li><a href="#">JYOTI Polytechnic</a></li>
+                    <li><a href="#">JYOTI International School</a></li>
+                    <li><a href="#">Kalarabanka Smart Village</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 4: Address -->
+            <div class="col-md-3 mb-4">
+                <h6 class="fw-bold">ADDRESS FOR COMMUNICATION</h6>
+                <p class="mb-1">
+                    <i class="bi bi-geo-alt-fill"></i> Jyoti Institute of Nursing Sciences,<br>
+                    (JINS), JINS Deemed to be University<br>
+                    Campus-1, Patia, Bhubaneswar 751024
+                </p>
+                <p class="mb-1"><i class="bi bi-telephone-fill"></i> 0674-2725053</p>
+                <p class="mb-1"><i class="bi bi-envelope-fill"></i> info@jyoti.ac.in</p>
+                <p><i class="bi bi-clock-fill"></i> Monday - Friday: 8:00 AM - 10:00 PM</p>
+            </div>
+        </div>
+
+        <!-- Footer bottom -->
+        <div class="text-center pt-3 border-top mt-3">
+            <p class="mb-0">&copy; Copyright 2025 - All Rights Reserved</p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

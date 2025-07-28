@@ -2,12 +2,23 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>About - Jyoti Nursing College</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"/>
     <style>
+   body {
+	margin: 0;
+	padding: 0;
+
+}
     /* 🔸 Navbar Link Hover Highlight */
 .navbar-nav .nav-link {
     transition: all 0.3s ease;
     font-weight: bold;
+}
+/* Enable hover dropdown for navbar */
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
 }
 
 .navbar-nav .nav-link:hover {
@@ -32,48 +43,60 @@
     </style>
 </head>
 <body>
-<!-- ✅ Top Header Section with Logo and Founder Info -->
-<div style="background: linear-gradient(to right, #1e3c72, #2a5298); color: white; padding: 10px 20px;"
-     class="d-flex justify-content-between align-items-center flex-wrap">
-
-    <!-- 🔗 Left: Go to Jyoti Home Page -->
-    <div class="d-flex align-items-center gap-2 mb-2 mb-md-0">
-        <i class="bi bi-arrow-left-circle-fill fs-5 text-white"></i>
-        <a href="https://kiit.ac.in" target="_blank" class="text-white text-decoration-none fw-bold">
-            GO TO JYOTI HOME PAGE
-        </a>
-    </div>
-
-    <!-- 🌐 Center: Social Icons -->
-    <div class="d-flex gap-3 mb-2 mb-md-0">
-        <a href="https://facebook.com" class="text-white" target="_blank" title="Facebook">
-            <i class="bi bi-facebook fs-5"></i>
-        </a>
-        <a href="https://twitter.com" class="text-white" target="_blank" title="Twitter">
-            <i class="bi bi-twitter fs-5"></i>
-        </a>
-        <a href="https://youtube.com" class="text-white" target="_blank" title="YouTube">
-            <i class="bi bi-youtube fs-5"></i>
-        </a>
-        <a href="https://instagram.com" class="text-white" target="_blank" title="Instagram">
-            <i class="bi bi-instagram fs-5"></i>
-        </a>
-    </div>
-
-    <!-- 👤 Right: Founder Info -->
-    <div class="d-flex align-items-center">
-        <img src="/images/jyotikumar.jpg" alt="Founder"
-             style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;" class="me-2">
-        <div>
-            <strong>Prof.Jyotikumar</strong><br>
-            <small>Founder – JNC</small><br>
-            <a href="https://jyotikumar.com" class="text-white text-decoration-none" target="_blank">jyotikumar.com</a>
+<!-- 🔶 1. Top Header: Home Link + Social Media + Founder -->
+    <div
+        style="background: linear-gradient(to right, #1e3c72, #2a5298); color: white; padding: 10px 20px;"
+        class="d-flex justify-content-between align-items-center flex-wrap">
+        <!-- Home link -->
+        <div class="d-flex align-items-center gap-2 mb-2 mb-md-0">
+            <i class="bi bi-arrow-left-circle-fill fs-5 text-white"></i>
+            <a href="https://kiit.ac.in" target="_blank" class="text-white text-decoration-none fw-bold">
+                GO TO JYOTI HOME PAGE
+            </a>
+        </div>
+        <!-- Social Icons -->
+<div class="d-flex gap-3 mb-2 mb-md-0">
+    <a href="https://www.facebook.com/KIITUniversityOfficial" class="text-white" target="_blank" title="Facebook">
+        <i class="bi bi-facebook fs-5"></i>
+    </a>
+    <a href="https://twitter.com/kiituniversity" class="text-white" target="_blank" title="Twitter">
+        <i class="bi bi-twitter fs-5"></i>
+    </a>
+    <a href="https://www.youtube.com/@KIITUniversityOfficial" class="text-white" target="_blank" title="YouTube">
+        <i class="bi bi-youtube fs-5"></i>
+    </a>
+    <a href="https://www.instagram.com/kiituniversity" class="text-white" target="_blank" title="Instagram">
+        <i class="bi bi-instagram fs-5"></i>
+    </a>
+</div>
+        <!-- Founder Info -->
+        <div class="d-flex align-items-center">
+            <img src="/images/jyotikumar.jpg" alt="Founder"
+                style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;"
+                class="me-2">
+            <div>
+                <strong>Prof.Jyotikumar</strong><br>
+                <small>Founder – JNC</small><br>
+                <a href="https://jyotikumar.com" class="text-white text-decoration-none" target="_blank">jyotikumar.com</a>
+            </div>
         </div>
     </div>
-</div>
-<!-- 🔷 Common Navigation Bar -->
+
+    <!-- 🔶 2. College Logo + Name -->
+    <div class="bg-white pt-2 pb-0 px-3 d-flex justify-content-between align-items-center border-bottom" style="margin-bottom: 0;">
+        <div class="d-flex align-items-center gap-3">
+            <img src="/images/logo.jpg" alt="College Logo" style="height: 60px;">
+            <div>
+                <h5 class="mb-0 text-dark fw-bold">JYOTI NURSING COLLEGE</h5>
+                <small class="text-muted">Affiliated to XYZ University | Est. 2020</small>
+            </div>
+        </div>
+    </div>
+
 <!-- Top Navigation -->
-<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #f57c00; width: 100%;">
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top" 
+   style="background-color: #f57c00; z-index: 1030; margin-top: -8px;">
+
 
     <div class="container-fluid">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
@@ -129,9 +152,15 @@
     </ul>
 </li>
     
-    <li class="nav-item flex-fill">
-        <a class="nav-link text-white" th:href="@{/people}">PEOPLE</a>
-    </li>
+    <li class="nav-item dropdown flex-fill hover-dropdown"><a
+						class="nav-link dropdown-toggle fw-bold text-white" href="#"
+						id="peopleDropdown" role="button"> PEOPLE </a>
+						<ul class="dropdown-menu" aria-labelledby="peopleDropdown">
+							<li><a class="dropdown-item" th:href="@{/administration}">Administration</a></li>
+							<li><a class="dropdown-item" th:href="@{/faculty}">Faculty</a></li>
+							<li><a class="dropdown-item" th:href="@{/board-of-studies}">Board
+									Of Studies</a></li>
+						</ul></li>
     <li class="nav-item">
     <a class="nav-link text-white" th:href="@{/contact}">CONTACT US</a>
 </li>
@@ -139,19 +168,16 @@
 </div>
  </div>
 </nav>
-
-<!-- ABOUT US BANNER  -->
 <!-- 🔽 Banner Section with Margin from Navbar -->
-<section style="margin-top: 70px;">
-    <div class="position-relative text-white">
-        <img src="/images/banner.jpg" alt="About Us" class="img-fluid w-100" 
-             style="height: 500px; object-fit: cover; opacity: 0.85;">
-        
-        <div class="position-absolute top-50 start-50 translate-middle text-center">
-            <h1 class="display-4 fw-bold">About Us</h1>
-            <p class="fs-5">Home / About Us</p>
-        </div>
+<section>
+  <div class="position-relative text-white">
+    <img src="/images/banner.jpg" alt="About Us" class="img-fluid w-100"
+         style="height: 500px; object-fit: cover; opacity: 0.85;">
+    <div class="position-absolute top-50 start-50 translate-middle text-center">
+      <h1 class="display-4 fw-bold">About Us</h1>
+      <p class="fs-5">Home / About Us</p>
     </div>
+  </div>
 </section>
 
 <!-- ✅ About Intro Section -->
@@ -224,6 +250,8 @@
 </div>
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<!-- ⚫ Full-width Black Horizontal Line -->
+<hr style="border: none; height: 3px; background-color: black; margin: 0;">
 <!-- 🔻 Footer Section -->
 <footer class="bg-light text-dark pt-5 pb-3">
     <div class="container">

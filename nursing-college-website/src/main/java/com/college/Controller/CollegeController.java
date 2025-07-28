@@ -37,15 +37,22 @@ public class CollegeController {
 
 	@GetMapping("/courses")
 	public String showCourses(Model model) {
-		List<Course> courseList = courseService.getAllCourses();
-		model.addAttribute("courses", courseList);
-		return "courses";
+	    List<Course> courseList = courseService.getAllCourses();
+	    model.addAttribute("courses", courseList);
+	    
+	    // ✅ Add this line to help highlight the ACADEMICS navbar
+	    model.addAttribute("activePage", "courses");
+
+	    return "courses";
 	}
+	
 
 	@GetMapping("/admission")
-	public String admission() {
-		return "admission";
+	public String admission(Model model) {
+	    model.addAttribute("activePage", "admission");
+	    return "admission";
 	}
+	
 
 	@PostMapping("/admission/save")
 	public String saveAdmission(@ModelAttribute Admission admission) {
@@ -92,4 +99,48 @@ public class CollegeController {
 	public String showThesisPage() {
 		return "thesis";
 	}
+	@GetMapping("/people")
+    public String showPeoplePage() {
+        return "people";  // It will look for people.html in src/main/resources/templates/
+    }
+	@GetMapping("/administration")
+	public String administration() {
+	    return "administration";
+	}
+	@GetMapping("/faculty")
+	public String faculty() {
+	    return "faculty";
+	}
+	@GetMapping("/board-of-studies")
+	public String boardOfStudies() {
+	    return "board-of-studies";
+	}
+	
+	@GetMapping("/tours")
+	public String showToursPage() {
+	    return "tours"; // must match templates/tours.html
+	}
+	@GetMapping("/aluminipage")
+    public String aluminiPage() {
+        return "aluminipage"; // looks for alumnipage.html inside templates folder
+    }
+	 @GetMapping("/quickhelp")
+	    public String quickHelpPage() {
+	        return "quick-help"; // Thymeleaf will look for quick-help.html in templates/
+	    }
+	 @GetMapping("/sports")
+	 public String sportsPage() {
+	     return "sports";
+	 }
+	 @GetMapping("/facility")
+	 public String facilityPage() {
+	     return "facility";
+	 }
+	 @GetMapping("/admission-2025")
+	    public String showAdmissionPage() {
+	        return "admission-2025";  // returns admission-2025.html from templates folder
+	    }
+	 
+	 
+
 }

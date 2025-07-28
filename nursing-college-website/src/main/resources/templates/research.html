@@ -6,6 +6,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" />
 
     <style>
+    body {
+	margin: 0;
+	padding: 0;
+
+}
         .gallery-img {
             height: 200px;
             object-fit: cover;
@@ -67,6 +72,11 @@
     border-radius: 6px;
     text-decoration: none;
 }
+/* Enable hover dropdown for navbar */
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+}
     </style>
 </head>
 <body>
@@ -96,10 +106,8 @@
 </div>
 
 <!-- 🔷 Navigation Bar -->
-<!-- Top Navigation -->
-<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #f57c00; width: 100%;">
-
-    <div class="container-fluid">
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background-color: #f57c00; z-index: 1030;">
+<div class="container-fluid">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -153,9 +161,15 @@
     </ul>
 </li>
     
-    <li class="nav-item flex-fill">
-        <a class="nav-link text-white" th:href="@{/people}">PEOPLE</a>
-    </li>
+    <li class="nav-item dropdown flex-fill hover-dropdown"><a
+						class="nav-link dropdown-toggle fw-bold text-white" href="#"
+						id="peopleDropdown" role="button"> PEOPLE </a>
+						<ul class="dropdown-menu" aria-labelledby="peopleDropdown">
+							<li><a class="dropdown-item" th:href="@{/administration}">Administration</a></li>
+							<li><a class="dropdown-item" th:href="@{/faculty}">Faculty</a></li>
+							<li><a class="dropdown-item" th:href="@{/board-of-studies}">Board
+									Of Studies</a></li>
+						</ul></li>
     <li class="nav-item">
     <a class="nav-link text-white" th:href="@{/contact}">CONTACT US</a>
 </li>
@@ -346,14 +360,14 @@
 
 <!-- Thesis List Button -->
 <div class="text-center mb-5">
-    <a href="/pdf/thesis-list.pdf" target="_blank">
-    <div style="background-color: #f57c00; color: white; padding: 15px 25px; display: inline-block; font-weight: bold; font-size: 16px; border-radius: 4px;">
+    <a href="/pdf/thesis-list.pdf" target="_blank" class="btn btn-warning text-white fw-bold">
         Thesis List ➜
-    </div>
-</a>
+    </a>
 </div>
 
 
+<!-- ⚫ Full-width Black Horizontal Line -->
+<hr style="border: none; height: 3px; background-color: black; margin: 0;">
 <!-- Footer Section -->
 <footer class="bg-light text-dark pt-5 pb-3 mt-5">
     <div class="container">

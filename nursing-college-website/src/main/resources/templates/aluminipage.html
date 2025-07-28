@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alumni – Jyoti Nursing College</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .scroll-wrapper {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.scroll-track {
+  display: flex;
+  width: 400vw; /* 4 images * 100vw each */
+  animation: scrollBanner 16s linear infinite;
+}
+
+.scroll-track img {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+@keyframes scrollBanner {
+  0%   { transform: translateX(0%); }
+  25%  { transform: translateX(-100vw); }
+  50%  { transform: translateX(-200vw); }
+  75%  { transform: translateX(-300vw); }
+  100% { transform: translateX(0%); }
+}
+
+    .top-bar {
+      background-color: #00854c;
+      color: white;
+      font-weight: bold;
+      text-align: center;
+      padding: 5px 0;
+    }
+
+    .main-navbar {
+      background-color: #00cc66;
+      font-weight: bold;
+    }
+
+    .main-navbar .nav-link {
+      color: white !important;
+      font-size: 14px;
+    }
+
+    .sub-navbar {
+      background: linear-gradient(to right, #00e676, #1de9b6);
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .sub-navbar a {
+      color: #fff;
+      padding: 10px 15px;
+      display: inline-block;
+      text-decoration: none;
+    }
+
+    .sub-navbar a:hover {
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+
+    .quick-help {
+      position: fixed;
+      top: 50%;
+      right: 0;
+      background-color: #00854c;
+      color: white;
+      writing-mode: vertical-rl;
+      transform: translateY(-50%);
+      padding: 10px;
+      border-radius: 6px 0 0 6px;
+      font-weight: bold;
+      z-index: 999;
+    }
+
+    .scrollable-banner {
+      display: flex;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+    }
+
+    .scrollable-banner::-webkit-scrollbar {
+      height: 10px;
+    }
+
+    .scrollable-banner::-webkit-scrollbar-thumb {
+      background-color: #007f5f;
+      border-radius: 5px;
+    }
+
+    .scrollable-banner img {
+      height: 100vh;
+      width: 100vw;
+      flex-shrink: 0;
+      object-fit: cover;
+    }
+    .accred-logo {
+  height: 80px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 10px;
+  max-width: 180px;
+  object-fit: contain;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+<style>
+.recruiter-slider-wrapper {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.recruiter-slider {
+  display: flex;
+  gap: 40px;
+  animation: scrollLogos 20s linear infinite;
+}
+
+.recruiter-slider img {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+  background-color: #fff;
+  border-radius: 6px;
+  padding: 10px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+}
+@keyframes scrollLogos {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.sub-navbar {
+    background-color: #f0f0f5; /* Light subtle background */
+    padding: 12px 0;
+    font-weight: bold;
+    border-top: 2px solid #e0e0e0;
+    border-bottom: 2px solid #e0e0e0;
+  }
+
+  .sub-navbar a {
+    color: #1a1a1a;
+    text-decoration: none;
+    margin: 0 20px;
+    padding: 6px 12px;
+    transition: all 0.3s ease;
+  }
+
+  .sub-navbar a:hover {
+    color: #0d6efd;
+    background-color: #e8f0ff;
+    border-radius: 5px;
+  }
+  .modal {
+  display: none;
+  position: fixed;
+  z-index: 1050;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 8px;
+  width: 50%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  animation: fadeIn 0.3s ease;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #000;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+.sub-navbar {
+    display: flex;
+    justify-content: center;
+    background-color: #f0f0f0;
+    padding: 10px 0;
+    gap: 20px;
+  }
+
+  .about-dropdown {
+    position: relative;
+  }
+
+  .about-dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    width: 600px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    z-index: 1000;
+    display: flex;
+    border-radius: 8px;
+  }
+
+  .about-links {
+    flex: 1;
+  }
+
+  .about-links a {
+    display: block;
+    color: #333;
+    padding: 8px 0;
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .about-links a:hover {
+    color: green;
+  }
+
+  .about-image {
+    flex: 1;
+    padding-left: 20px;
+  }
+
+  .about-image img {
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+</style>
+ 
+</head>
+<body>
+  <div class="top-bar">24*7 Student help line number: +91 8093010563</div>
+
+  <nav class="navbar navbar-expand-lg main-navbar sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand text-white fw-bold" href="#">Jyoti Nursing College</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="#">Library</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Alumni</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Sports</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Careers</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Examination</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">KIITEE 2025</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+ <!-- ✅ HTML -->
+<!-- 🔹 Sub Navbar with Dropdown for ABOUT KIIT -->
+<div class="sub-navbar" style="background-color: #f8f9fa; padding: 12px 0; text-align: center; font-weight: bold;">
+  <div class="about-dropdown" style="display: inline-block; position: relative; margin-right: 20px;">
+    <a href="javascript:void(0);" onclick="toggleAboutDropdown()" style="text-decoration: none; color: #00703C;">ABOUT KIIT</a>
+
+    <!-- Dropdown Content -->
+    <div class="about-dropdown-content" id="aboutDropdown" style="display: none; position: absolute; top: 35px; left: 0; background-color: white; border: 1px solid #ccc; width: 650px; padding: 20px; z-index: 999; display: flex; gap: 20px; text-align: left;">
+      
+      <!-- Left Links -->
+      <div class="about-links" style="flex: 1;">
+        <a href="javascript:void(0);" onclick="showAboutContent('about')" style="display:block; margin-bottom:10px;">About KIIT</a>
+        <a href="javascript:void(0);" onclick="showAboutContent('edge')" style="display:block; margin-bottom:10px;">KIIT Edge</a>
+        <a href="javascript:void(0);" onclick="showAboutContent('ranking')" style="display:block; margin-bottom:10px;">Ranking & Recognition</a>
+        <a href="javascript:void(0);" onclick="showAboutContent('history')" style="display:block; margin-bottom:10px;">History</a>
+        <a href="javascript:void(0);" onclick="showAboutContent('footprint')" style="display:block; margin-bottom:10px;">Global Footprint</a>
+        <a href="javascript:void(0);" onclick="showAboutContent('founder')" style="display:block;">About Founder</a>
+      </div>
+
+      <!-- Right Image + Paragraph -->
+      <div class="about-image" style="flex: 2;">
+        <img src="images/campus.jpg" alt="KIIT Campus" style="max-width: 100%; border-radius: 8px;">
+        <p id="aboutText" style="margin-top: 10px; color: #333;">
+          Click a topic to view details about KIIT.
+        </p>
+      </div>
+    </div>
+  </div>
+  <!-- 🔹 ACADEMICS -->
+  <div class="about-dropdown" style="display: inline-block; position: relative; margin-right: 20px;">
+    <a href="javascript:void(0);" onclick="toggleAcademicsDropdown()" style="text-decoration: none; color: #00703C;">ACADEMICS</a>
+    <div class="about-dropdown-content" id="academicsDropdown" style="display: none; position: absolute; top: 35px; left: 0; background: white; border: 1px solid #ccc; width: 650px; padding: 20px; z-index: 999; display: flex; gap: 20px;">
+      <div class="about-links" style="flex: 1;">
+        <a href="javascript:void(0);" onclick="showAcademicsContent('academics')">Academics</a>
+        <a href="javascript:void(0);" onclick="showAcademicsContent('schools')">Schools</a>
+        <a href="javascript:void(0);" onclick="showAcademicsContent('programmes')">Programmes</a>
+        <a href="javascript:void(0);" onclick="showAcademicsContent('examination')">Examination</a>
+        <a href="javascript:void(0);" onclick="showAcademicsContent('faculty')">Faculty</a>
+        <a href="javascript:void(0);" onclick="showAcademicsContent('scholarships')">Scholarships & Fellowship</a>
+      </div>
+      <div class="about-image" style="flex: 2;">
+        <img src="images/library.jpg" alt="Academics" style="max-width: 100%; border-radius: 8px;">
+        <p id="academicsText" style="margin-top: 10px;">Click an item to know more about academics at KIIT.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 🔹 Other Nav Links -->
+  <a href="/research" style="margin-right: 20px; text-decoration: none; color: #00703C;">RESEARCH</a>
+  <a href="/international-affairs" style="margin-right: 20px; text-decoration: none; color: #00703C;">INTERNATIONAL AFFAIRS</a>
+  <a href="/admission-2025" style="text-decoration: none; color: #00703C;">ADMISSION 2025</a>
+</div>
+
+<!-- ✅ SCRIPT -->
+<script>
+  function toggleAboutDropdown() {
+    const dropdown = document.getElementById("aboutDropdown");
+    dropdown.style.display = dropdown.style.display === "flex" ? "none" : "flex";
+  }
+
+  // Optional: click outside to close
+  document.addEventListener("click", function (event) {
+    const dropdown = document.getElementById("aboutDropdown");
+    const clickedInside = event.target.closest(".about-dropdown");
+    if (!clickedInside) {
+      dropdown.style.display = "none";
+    }
+  });
+</script>
+
+
+  <div class="quick-help" onclick="window.location.href='/quickhelp'">Quick Help</div>
+  <!-- ✅ Full Page Scrollable Local Images -->
+<div class="scroll-wrapper">
+  <div class="scroll-track" id="scrollTrack">
+    <img src="/images/gallery1.jpg" alt="Banner 1">
+    <img src="/images/gallery2.jpg" alt="Banner 2">
+    <img src="/images/gallery3.jpg" alt="Banner 3">
+    <img src="/images/gallery4.jpg" alt="Banner 4">
+  </div>
+</div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const scrollContainer = document.getElementById('autoScroll');
+    let scrollAmount = 0;
+
+    function autoScrollImages() {
+      scrollAmount += window.innerWidth;
+      if (scrollAmount >= scrollContainer.scrollWidth) {
+        scrollAmount = 0;
+      }
+      scrollContainer.scrollTo({ left: scrollAmount, behavior: 'smooth' });
+    }
+
+    setInterval(autoScrollImages, 4000); // Scroll every 4 seconds
+  </script>
+  <section style="background-color: #ccc; padding: 40px 0;">
+  <div class="container text-center">
+    <h3 class="fw-bold mb-4">Accreditation</h3>
+    <div class="d-flex flex-wrap justify-content-center gap-4">
+      <img src="/images/naan.jpg" alt="NAAC" class="accred-logo">
+      <img src="/images/iet.jpg" alt="IET UK" class="accred-logo">
+      <img src="/images/iettech.jpg" alt="IET Tech" class="accred-logo">
+      <img src="/images/tier.jpg" alt="Tier 1" class="accred-logo">
+      <img src="/images/abet.jpg" alt="ABET" class="accred-logo">
+    </div>
+  </div>
+</section>
+
+<!-- ✅ Rankings Section -->
+<section style="background-color: #f6f6f6; padding: 60px 0;">
+  <div class="container">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <h3 class="fw-bold">Rankings</h3>
+      <a href="#" class="text-primary text-decoration-none fw-semibold">All Rankings</a>
+    </div>
+
+    <div class="row g-4">
+
+      <!-- 🔹 Ranking Card 1 -->
+      <div class="col-md-4">
+        <div class="bg-white p-4 rounded shadow-sm h-100">
+          <img src="/images/ariia.jpg" alt="ARIIA" class="mb-3" style="height: 50px;">
+          <h5 class="fw-bold">Ranked No. 1</h5>
+          <p class="mb-2">by Atal Ranking of Institution on innovation achievements, for second time Continuously.</p>
+          <img src="/images/nirf.jpg" alt="NIRF" class="my-3" style="height: 45px;">
+          <h6 class="fw-semibold">Ranked 15</h6>
+          <p>Among All Public & Private Universities in India</p>
+        </div>
+      </div>
+
+      <!-- 🔹 Ranking Card 2 -->
+      <div class="col-md-4">
+        <div class="bg-white p-4 rounded shadow-sm h-100">
+          <img src="/images/the.jpg" alt="THE Ranking" class="mb-3" style="height: 50px;">
+          <h5 class="fw-bold">601–800</h5>
+          <p>in Times Higher Education World University Rankings 2024</p>
+          <h6 class="fw-bold">168</h6>
+          <p><small>(10<sup>th</sup> best among Indian Universities)</small></p>
+          <p>In Times Higher Education Young University Ranking 2024</p>
+          <h6 class="fw-bold">184</h6>
+          <p>in Times Higher Education Asia University Rankings 2025</p>
+          <h6 class="fw-bold">6th Rank</h6>
+          <p>in the Overall Category among Indian universities</p>
+        </div>
+      </div>
+
+      <!-- 🔹 Ranking Card 3 -->
+      <div class="col-md-4">
+        <div class="bg-white p-4 rounded shadow-sm h-100">
+          <img src="/images/qs.jpg" alt="QS Ranking" class="mb-3" style="height: 50px;">
+          <h5 class="fw-bold">Ranked No. 1</h5>
+          <p>Among Private private universities in Odisha.</p>
+          <h6 class="fw-bold">55</h6>
+          <p>In QS Asia University Rankings 2025 : South Asia</p>
+          <h6 class="fw-bold">QS 5 Stars</h6>
+          <p>India’s first QS 5 Stars Rated University – 2021</p>
+          <h6 class="fw-bold">9th Rank</h6>
+          <p>Among India’s premier private higher education institutions.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<section style="background-color: #fff; padding: 50px 0;">
+  <div class="container text-center">
+    <h3 class="fw-bold mb-5">Our Recruiters</h3>
+
+    <div class="recruiter-slider-wrapper">
+      <div class="recruiter-slider" id="recruiterSlider">
+        <!-- Logos (repeat or add more) -->
+        <img src="/images/accenture.jpg" alt="Accenture">
+        <img src="/images/yugabytedb.jpg" alt="YugabyteDB">
+        <img src="/images/tcs.jpg" alt="TCS">
+        <img src="/images/coforge.jpg" alt="Coforge">
+        <img src="/images/nvidia.jpg" alt="NVIDIA">
+        <img src="/images/google.jpg" alt="Google">
+        <img src="/images/microsoft.jpg" alt="Microsoft">
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ✅ Footer Banner Notice -->
+<div style="background-color: #f6f09e; padding: 10px; text-align: center; font-weight: bold;">
+  KIIT has only one permanent campus in Bhubaneswar, Odisha. It has no other campus / off campus anywhere else in the country and the globe.
+</div>
+
+<!-- ✅ Footer Navigation Sections -->
+<section style="background-color: #00796b; color: white; padding: 30px 0;">
+  <div class="container text-center d-flex flex-wrap justify-content-around">
+    <div class="p-3 flex-fill fw-bold">Know KIIT</div>
+    <div class="p-3 flex-fill fw-bold">Academics</div>
+    <div class="p-3 flex-fill fw-bold">Campus Life</div>
+    <div class="p-3 flex-fill fw-bold">Know Founder</div>
+  </div>
+</section>
+
+<!-- ✅ Footer Links and Contact -->
+<footer style="background-color: #263238; color: #a5d6a7; padding: 40px 0; font-size: 15px;">
+  <div class="container">
+    <div class="row text-start">
+
+      <div class="col-md-3 mb-3">
+        <h6 class="text-success">Other Links</h6>
+        <ul class="list-unstyled">
+          <li>About us</li>
+          <li>Academic Council</li>
+          <li>AICTE Online Grievance</li>
+          <li>Anthem</li>
+          <li>Anti-Ragging Committee</li>
+          <li>ARIIA 2021</li>
+        </ul>
+      </div>
+
+      <div class="col-md-3 mb-3">
+        <h6 class="text-success">Quick Links</h6>
+        <ul class="list-unstyled">
+          <li>CIQA</li>
+          <li>Controller of Examinations</li>
+          <li>COVID 19 Counseling</li>
+          <li>Download Logo</li>
+          <li>IQAC</li>
+          <li>KIIT Innovation</li>
+        </ul>
+      </div>
+
+      <div class="col-md-3 mb-3">
+        <h6 class="text-success">KIIT Group Websites</h6>
+        <ul class="list-unstyled">
+          <li>Founder</li>
+          <li>KISS Foundation</li>
+          <li>KIMS Hospital</li>
+          <li>KIIT-ITI</li>
+          <li>KIIT Polytechnic</li>
+        </ul>
+      </div>
+
+      <div class="col-md-3 mb-3">
+        <h6 class="text-success">Contact us</h6>
+        <p>
+          Kalinga Institute of Industrial Technology (KIIT)<br>
+          Patia, Bhubaneswar, Odisha, India 751024
+        </p>
+        <p><i class="bi bi-envelope-fill"></i> kiit@kiit.ac.in</p>
+        <p><i class="bi bi-telephone-fill"></i> Helpline: 0674 2725113</p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+  // Toggle dropdowns
+  function toggleAboutDropdown() {
+    document.getElementById("aboutDropdown").style.display = "block";
+    document.getElementById("academicsDropdown").style.display = "none";
+  }
+
+  function toggleAcademicsDropdown() {
+    document.getElementById("academicsDropdown").style.display = "block";
+    document.getElementById("aboutDropdown").style.display = "none";
+  }
+
+  // ABOUT section content
+  function showAboutContent(topic) {
+    const content = {
+      about: "KIIT is a globally recognized university offering quality education across diverse disciplines.",
+      edge: "Our unique edge lies in advanced infrastructure, global exposure, and top placements.",
+      ranking: "KIIT consistently ranks among India's top universities as per national and global agencies.",
+      history: "Established in 1992, KIIT has grown from humble beginnings to a global brand.",
+      footprint: "With partnerships across 30+ countries, KIIT's academic footprint is international.",
+      founder: "Dr. Achyuta Samanta's vision and commitment have been the driving force behind KIIT."
+    };
+    document.getElementById("aboutText").innerText = content[topic];
+  }
+
+  // ACADEMICS section content
+  function showAcademicsContent(item) {
+    const data = {
+      academics: "Academics at KIIT blend theory with practical exposure through innovative pedagogy.",
+      schools: "KIIT houses several schools across engineering, medical, law, management, and more.",
+      programmes: "Over 200 programmes including B.Tech, MBA, MBBS, Law, and doctoral courses.",
+      examination: "Our examination system is robust, tech-enabled, and aligned with global standards.",
+      faculty: "KIIT boasts experienced faculty with international exposure and industry alignment.",
+      scholarships: "Various scholarships and fellowships support meritorious and underprivileged students."
+    };
+    document.getElementById("academicsText").innerText = data[item];
+  }
+
+  // Hide dropdowns when clicking outside
+  document.addEventListener("click", function (event) {
+    if (!event.target.closest('.about-dropdown')) {
+      document.getElementById("aboutDropdown").style.display = "none";
+      document.getElementById("academicsDropdown").style.display = "none";
+    }
+  });
+</script>
+
+<!-- ✅ Footer Bar (Optional Bottom Bar) -->
+<div style="background-color: #004d40; color: #00e676; text-align: center; padding: 10px; font-weight: bold;">
+  24*7 Student Helpline: +91 9348784724
+</div>
+
+
+
+</body>
+</html>
