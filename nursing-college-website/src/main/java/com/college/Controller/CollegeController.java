@@ -29,10 +29,10 @@ public class CollegeController {
 		model.addAttribute("newsTicker", "Admissions Open for B.Sc, GNM, and M.Sc Nursing | Apply Now!");
 		return "index";
 	}
-
 	@GetMapping("/about")
-	public String about() {
-		return "about";
+	public String about(Model model) {
+	    model.addAttribute("activePage", "about");
+	    return "about";
 	}
 
 	@GetMapping("/courses")
