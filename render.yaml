@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: nursing-college-site
+    env: docker
+    plan: free
+    region: singapore
+    dockerfilePath: ./Dockerfile
+    buildFilter:
+      paths:
+        - Dockerfile
+        - render.yaml
+        - src/**
+        - pom.xml
+    autoDeploy: true
