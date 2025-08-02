@@ -12,3 +12,11 @@ services:
         - src/**
         - pom.xml
     autoDeploy: true
+    startCommand: java -jar app.jar --spring.profiles.active=docker
+    envVars:
+      - key: SPRING_DATASOURCE_URL
+        value: jdbc:mysql://switchyard.proxy.rlwy.net:36188/railway
+      - key: SPRING_DATASOURCE_USERNAME
+        value: root
+      - key: SPRING_DATASOURCE_PASSWORD
+        value: LsZxBqitFmFrzmtgItFwlgOZZtnyeTqn

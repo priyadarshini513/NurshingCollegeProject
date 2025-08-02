@@ -3,10 +3,10 @@ server:
 
 spring:
   datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/KIIMS
+    url: jdbc:mysql://switchyard.proxy.rlwy.net:36188/railway
     username: root
-    password: root
+    password: LsZxBqitFmFrzmtgItFwlgOZZtnyeTqn
+    driver-class-name: com.mysql.cj.jdbc.Driver
 
   jpa:
     hibernate:
@@ -27,3 +27,13 @@ spring:
   web:
     resources:
       static-locations: classpath:/static/
+
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: DEBUG
+        type:
+          descriptor:
+            sql:
+              BasicBinder: TRACE
