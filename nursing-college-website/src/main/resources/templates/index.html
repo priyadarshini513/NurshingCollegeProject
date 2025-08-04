@@ -259,22 +259,22 @@ body {
         <!-- Home link -->
         <div class="d-flex align-items-center gap-2 mb-2 mb-md-0">
             <i class="bi bi-arrow-left-circle-fill fs-5 text-white"></i>
-            <a href="/" target="_blank" class="text-white text-decoration-none fw-bold">
+            <a th:href="@{/}" class="text-white text-decoration-none fw-bold">
     GO TO JYOTI HOME PAGE
 </a>
         </div>
         <!-- Social Icons -->
 <div class="d-flex gap-3 mb-2 mb-md-0">
-    <a href="https://www.facebook.com/KIITUniversityOfficial" class="text-white" target="_blank" title="Facebook">
+    <a href="https://www.facebook.com/JyotiNursingCollegeOfficial" class="text-white" target="_blank" title="Facebook">
         <i class="bi bi-facebook fs-5"></i>
     </a>
-    <a href="https://twitter.com/kiituniversity" class="text-white" target="_blank" title="Twitter">
+    <a href="https://twitter.com/JyotiNursingCollegeOfficial" class="text-white" target="_blank" title="Twitter">
         <i class="bi bi-twitter fs-5"></i>
     </a>
-    <a href="https://www.youtube.com/@KIITUniversityOfficial" class="text-white" target="_blank" title="YouTube">
+    <a href="https://www.youtube.com/JyotiNursingCollegeOfficial" class="text-white" target="_blank" title="YouTube">
         <i class="bi bi-youtube fs-5"></i>
     </a>
-    <a href="https://www.instagram.com/kiituniversity" class="text-white" target="_blank" title="Instagram">
+    <a href="https://www.instagram.com/JyotiNursingCollegeOfficial" class="text-white" target="_blank" title="Instagram">
         <i class="bi bi-instagram fs-5"></i>
     </a>
 </div>
@@ -468,15 +468,15 @@ body {
 					<h3 class="fw-bold text-uppercase" style="color: #2b2b2b;">World
 						Class Facilities</h3>
 					<p style="line-height: 1.8; color: #444; text-align: justify;">
-						KINS was inspected by INC in the year 2005 and permitted annual
+						JINS was inspected by INC in the year 2005 and permitted annual
 						intake of 30 students for GNM program. 1st batch GNM was admitted
-						in the year 2008-2009 academic session. In 2010 GNM seat was
+						in the year 2022-2023 academic session. In 2023 GNM seat was
 						enhanced from 30 to 50 students. Thus 50 students were admitted in
-						the 2010-2011 session. Basic B.sc,4 years degree program of 4
-						years was started from 2010-2011 session after approval of INC
+						the 2023-2024 session. Basic B.sc,4 years degree program of 4
+						years was started from 2023-2024 session after approval of INC
 						with annual intake of 40 students. In 2012-13 session 2 year Post
 						Graduate Nursing degree was started with four specialties from the
-						academic session 2012. The B.Sc Nursing seat was enhanced from
+						academic session 2015. The B.Sc Nursing seat was enhanced from
 						40-60 annual intake.</p>
 				</div>
 
@@ -489,9 +489,9 @@ body {
     <a th:href="@{/contact}" class="value-box-green">
         <i class="bi bi-arrow-right-circle-fill me-2"></i> INQUIRE NOW
     </a>
-    <a href="https://kiit.ac.in/open-day/" target="_blank" class="value-box-green">
-        <i class="bi bi-calendar-check-fill me-2"></i> SCHEDULE A VISIT
-    </a>
+    <a href="#" class="value-box-green" data-bs-toggle="modal" data-bs-target="#visitModal">
+    <i class="bi bi-calendar-check-fill me-2"></i> SCHEDULE A VISIT
+</a>
     <a th:href="@{/tours}" class="value-box-green">
   <i class="bi bi-geo-alt-fill me-2"></i> CAMPUS TOURS
 </a>
@@ -570,7 +570,7 @@ body {
 				<div class="col-md-8">
 					<h5>
 						<i class="bi bi-megaphone text-danger me-2"></i> <a
-							href="https://kins.kiit.ac.in/international-conference-2024"
+							href="https://jyotinursingcollege.in/international-conference-2024"
 							class="text-decoration-none fw-bold" target="_blank"> 3rd
 							International Conference on Nursing </a>
 					</h5>
@@ -587,7 +587,7 @@ body {
 				<div class="col-md-8">
 					<h5>
 						<i class="bi bi-megaphone text-danger me-2"></i> <a
-							href="https://kins.kiit.ac.in/seminar-womens-health"
+							href="https://jyotinursingcollege.in/seminar-womens-health"
 							class="text-decoration-none fw-bold" target="_blank"> Seminar
 							on Women’s Health </a>
 					</h5>
@@ -604,7 +604,7 @@ body {
 				<div class="col-md-8">
 					<h5>
 						<i class="bi bi-megaphone text-danger me-2"></i> <a
-							href="https://kins.kiit.ac.in/blood-donation-camp-2024"
+							href="https://jyotinursingcollege.in/blood-donation-camp-2024"
 							class="text-decoration-none fw-bold" target="_blank"> Blood
 							Donation Camp by B.Sc Nursing </a>
 					</h5>
@@ -644,9 +644,9 @@ body {
 				<div class="col-md-4 mb-4">
 					<h5 class="fw-bold">Contact Info</h5>
 					<p class="mb-1">Jyoti Nursing College</p>
-					<p class="mb-1">Adashpur, Odisha, 754011</p>
-					<p class="mb-1">Phone: +91-9876543210</p>
-					<p>Email: info@jyotinursing.ac.in</p>
+					<p class="mb-1">Archaya Vihar, Odisha, 751022</p>
+					<p class="mb-1">Phone: +91-8908141428</p>
+					<p>Email: jyotikumarmandal8@gmail.com</p>
 				</div>
 			</div>
 			<hr class="border-secondary">
@@ -659,8 +659,7 @@ body {
 	<section class="py-5 bg-light">
 		<div class="container">
 			<h2 class="text-center fw-bold mb-5">Campus Gallery</h2>
-			<div id="galleryCarousel" class="carousel slide"
-				data-bs-ride="carousel">
+			<div id="galleryCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
 				<div class="carousel-inner">
 					<div class="carousel-item active">
 						<img src="/images/campus.jpg" class="d-block w-100"
@@ -740,7 +739,7 @@ body {
 				<div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
 					<h5 class="text-uppercase mb-4 font-weight-bold text-warning">Contact</h5>
 					<p>
-						<i class="fas fa-home mr-3"></i> Bhubaneswar, Odisha - 751002
+						<i class="fas fa-home mr-3"></i> Bhubaneswar, Odisha - 751022
 					</p>
 					<p>
 						<i class="fas fa-envelope mr-3"></i>
@@ -865,7 +864,7 @@ body {
                 <ul class="list-unstyled">
                     <li><a href="#">SAP Portal</a></li>
                     <li><a href="#">Grievance Cell</a></li>
-                    <li><a href="#">KIIT Review</a></li>
+                    <li><a href="#">JIIT Review</a></li>
                     <li><a href="#">Student Activity Centre</a></li>
                     <li><a href="#">Anti-Ragging</a></li>
                     <li><a href="#">Download Logo</a></li>
@@ -879,7 +878,7 @@ body {
                     <li><a href="#">Founder</a></li>
                     <li><a href="#">Jyoti Foundation</a></li>
                     <li><a href="#">Art of Giving</a></li>
-                    <li><a href="#">KIMS Hospital</a></li>
+                    <li><a href="#">JIMS Hospital</a></li>
                     <li><a href="#">Technology Business Incubator</a></li>
                     <li><a href="#">JYOTI-ITI</a></li>
                     <li><a href="#">JYOTI Polytechnic</a></li>
@@ -894,9 +893,9 @@ body {
                 <p class="mb-1">
                     <i class="bi bi-geo-alt-fill"></i> Jyoti Institute of Nursing Sciences,<br>
                     (JINS), JINS Deemed to be University<br>
-                    Campus-1, Patia, Bhubaneswar 751024
+                    Campus-1, Archaya Vihar, Bhubaneswar 751022
                 </p>
-                <p class="mb-1"><i class="bi bi-telephone-fill"></i> 0674-2725053</p>
+                <p class="mb-1"><i class="bi bi-telephone-fill"></i>8908141428</p>
                 <p class="mb-1"><i class="bi bi-envelope-fill"></i> info@jyoti.ac.in</p>
                 <p><i class="bi bi-clock-fill"></i> Monday - Friday: 8:00 AM - 10:00 PM</p>
             </div>
@@ -930,22 +929,40 @@ body {
   <h5 class="fw-bold" style="color: #ffffff; font-size: 20px; letter-spacing: 1px; margin-bottom: 15px;">
   OUR FOUNDER
 </h5>
-  <img src="/images/priyanka.jpg" width="100%"
+  <img src="/images/jyotikumar.jpg" width="100%"
        style="border-radius: 8px; margin-bottom: 10px;" alt="Founder">
-  <p style="color: orangered; font-weight: bold; margin: 0;">Dr. Priyanka P Rout</p>
+  <p style="color: orangered; font-weight: bold; margin: 0;">Dr. Jyoti Kumar Mandal</p>
 
   <!-- CONTACT INFO -->
   <h6 class="mt-4 fw-bold" style="color: #fff;">CONTACT INFO</h6>
   <p style="font-size: 14px; color: #ccc; line-height: 1.6;">
     Jyoti Institute of Dental Sciences (JIDS)<br>
-    KIIT Deemed to be University<br>
-    Campus-5, Patia<br>
-    Bhubaneswar – 751024<br><br>
+    JYOTI Deemed to be University<br>
+    Campus-5, Archaya Vihar<br>
+    Bhubaneswar – 751022<br><br>
     📞 Phone:
-    <a href="tel:9234567890" style="color: #f57c00; text-decoration: none;">9234567890</a><br>
+    <a href="tel:9234567890" style="color: #f57c00; text-decoration: none;">8908141428</a><br>
     📧 Email:
-    <a href="mailto:priyankarout1414@gmail.com" style="color: #64b5f6; text-decoration: none;">priyankarout1414@gmail.com</a>
+    <a href="mailto:jyotikumarmandal8@gmail.com" style="color: #64b5f6; text-decoration: none;">jyotikumarmandal8@gmail.com</a>
   </p>
+</div>
+<div class="modal fade" id="visitModal" tabindex="-1" aria-labelledby="visitModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content rounded-3 shadow">
+      <div class="modal-header bg-success text-white">
+        <h5 class="modal-title" id="visitModalLabel">📅 Visiting Time</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+      <p>OUR COLLEGE VISIT TIMING</p>
+        <p><strong>Monday to Saturday:</strong><br>Timing: 8:00 AM – 9:00 PM</p>
+        <p><strong>Sunday:</strong> Holiday</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success" data-bs-dismiss="modal">OK</button>
+      </div>
+    </div>
+  </div>
 </div>
 
 <script
